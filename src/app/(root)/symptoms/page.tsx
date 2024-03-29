@@ -8,7 +8,12 @@ const Symptoms = () => {
   return (
     <section className="mx-auto w-screen min-w-[330px] max-w-[1024px] ">
       <div className="mx-5 mt-4 md:mx-16 lg:mx-16">
-        <h2 className="mb-1 text-left text-3xl font-medium lg:text-5xl">Our Symptoms</h2>
+        {/* <h2 className="mb-1 text-left text-3xl font-medium lg:text-5xl">Our Symptoms</h2> */}
+        {/* <div className="mx-auto  max-w-[1024px] "> */}
+        <h2 className="-mx-5 mb-3 mt-0  bg-brandSecondary  px-8 py-2 text-3xl capitalize sm:pl-20 sm:text-5xl">
+          Our&nbsp;Symptoms
+        </h2>
+        {/* </div> */}
         <div className="mx-2 mt-0 space-y-5 md:mx-4 md:mt-8  lg:mx-8 lg:mt-12 ">
           <p className="text-md">
             Understanding Long COVID symptoms can be complex and seem to be ever-changing. This section is dedicated to

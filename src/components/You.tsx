@@ -9,16 +9,23 @@ import Image from "next/image";
 import BreakpointIdentifier from "./tgg-utils/BreakpointIdentifier";
 import Breakpoints from "./tgg-utils/Breakpoints";
 import { subscribeToNewsletter } from "@/hooks/subscribeToNewsletter";
+import { useToast } from "@/components/ui/use-toast";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const You = () => {
   const [email, setEmail] = useState<string>("");
+  const { toast } = useToast();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Add your subscription logic here
     console.log("Subscribing with email:", email);
-    await subscribeToNewsletter(email);
+    subscribeToNewsletter(email);
     setEmail("");
+    toast({
+      title: "Newsletter Sign Up Complete",
+      description: "Thank you for signing up. We appreciate your support.",
+    });
   };
 
   const emailAddressToCopy = "contact@lovidia.com";
@@ -83,16 +90,25 @@ const You = () => {
             </div>
 
             <div className="mx-5 flex flex-col items-center sm:justify-center md:mx-24 md:mt-8 lg:mx-0 lg:mt-5 lg:h-[56px] lg:w-full lg:flex-row lg:justify-start">
-              <div className="mb-3 mt-6 w-fit self-start rounded-full bg-white lg:m-0">
-                <Button
-                  onClick={handleCopy}
-                  className="h-[56px] bg-white text-base lowercase sm:self-center lg:mx-0 lg:mt-0"
-                  variant="white"
-                >
-                  <Image src="/images/general/copy.svg" alt="copy paste icon" width={20} height={20} />
-                  <div className="ml-3">contact@lovidia.com</div>
-                </Button>
-              </div>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <div className="mb-3 mt-6 w-fit self-start rounded-full bg-white lg:m-0">
+                      <Button
+                        onClick={handleCopy}
+                        className="h-[56px] bg-white text-base lowercase sm:self-center lg:mx-0 lg:mt-0"
+                        variant="white"
+                      >
+                        <Image src="/images/general/copy.svg" alt="copy paste icon" width={20} height={20} />
+                        <div className="ml-1">contact@lovidia.com</div>
+                      </Button>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent className="px-2 py-1">
+                    <p className="m-0">Click to Copy to Clipboard</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
 
               <p className="my-2 text-center text-sm font-bold lg:hidden">OR</p>
               <Link className="mt-3 self-end sm:ml-[50%] sm:self-center lg:m-0 " href="/contact">

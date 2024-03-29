@@ -8,9 +8,14 @@ import Breakpoints from "@/components/tgg-utils/Breakpoints";
 export default function Helpers() {
   return (
     <section className="mx-0 mt-6 min-w-[330px]">
-      <h2 className="mx-auto my-3 w-full rounded-sm bg-brandSecondary px-5 py-2 text-center text-4xl font-medium lg:my-8 lg:text-5xl">
+      <div className="mx-auto  max-w-[1024px] ">
+        <h2 className="-mx-5 mb-3 mt-0  bg-brandSecondary  px-8 py-2 text-3xl capitalize sm:pl-20 sm:text-5xl">
+          Our&nbsp;Helpers
+        </h2>
+      </div>
+      {/* <h2 className="mx-auto my-3 w-full rounded-sm bg-brandSecondary px-5 py-2 text-center text-4xl font-medium lg:my-8 lg:text-5xl">
         Our Helpers
-      </h2>
+      </h2> */}
       <div className="mx-4 mt-0 flex flex-col gap-5 text-lg lg:mt-10">
         <div className="mx-auto gap-5 lg:flex">
           <div className="mx-auto h-[220px] w-auto overflow-clip lg:h-[330px]">

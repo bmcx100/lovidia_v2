@@ -13,6 +13,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import Breakpoints from "./tgg-utils/Breakpoints";
 import { sendContactUs } from "@/hooks/sendContactUs";
 import { formSchemaContactUs } from "@/constants/contactUsForm";
+import { useToast } from "@/components/ui/use-toast";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Contact_Us = () => {
   const form = useForm<z.infer<typeof formSchemaContactUs>>({
@@ -25,9 +27,24 @@ const Contact_Us = () => {
     },
   });
 
+  const {
+    reset,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(formSchemaContactUs),
+  });
+
+  const { toast } = useToast();
+
   const localHandleSubmit = (values: z.infer<typeof formSchemaContactUs>) => {
     console.log(values);
+    console.log("Julz is a smelly butt");
     sendContactUs(values);
+    form.reset();
+    toast({
+      title: "Contact Form Submitted",
+      description: "Thank you for contacting us. We will respond to your message as soon as possible.",
+    });
   };
 
   const emailAddressToCopy = "contact@lovidia.com";
@@ -55,9 +72,20 @@ const Contact_Us = () => {
           <div className=" px-3  text-sm sm:pl-16 sm:text-base">
             <p>
               You can also always email us at{" "}
-              <span onClick={handleCopy} className="cursor-pointer font-medium text-brandLinkBlue">
-                contact@lovidia.com
-              </span>{" "}
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger>
+                    <div className="flex h-fit items-center justify-end">
+                      <span onClick={handleCopy} className="cursor-pointer font-medium text-brandLinkBlue">
+                        contact@lovidia.com
+                      </span>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent className="px-2 py-1">
+                    <p className="m-0">Click to Copy to Clipboard</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>{" "}
               to let us know whatever&nbsp;is on your&nbsp;mind.
             </p>
           </div>
@@ -85,7 +113,7 @@ const Contact_Us = () => {
                           <SelectContent>
                             <SelectItem value="select">Select An Option</SelectItem>
                             <SelectItem value="share">Share Your Story</SelectItem>
-                            <SelectItem value="suggestion">Suggestion for Lophia</SelectItem>
+                            <SelectItem value="suggestion">Suggestion for Lovidia</SelectItem>
                             <SelectItem value="recipe">Recipe Submission</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
