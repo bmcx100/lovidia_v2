@@ -8,7 +8,6 @@ import Image from "next/image";
 // import copyIcon from "/images/general/copy.svg";
 import BreakpointIdentifier from "./tgg-utils/BreakpointIdentifier";
 import Breakpoints from "./tgg-utils/Breakpoints";
-import { sendEmail } from "@/hooks/sendEmail";
 import { subscribeToNewsletter } from "@/hooks/subscribeToNewsletter";
 
 const You = () => {
