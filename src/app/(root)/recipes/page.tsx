@@ -14,8 +14,7 @@ export default function Home() {
         <div className="bg-primary">
           {/* <h2 className="px-4 py-2 text-2xl font-bold shadow-md shadow-primary/5 lg:text-5xl"> */}
           <h1 className="py-4 pl-2 text-3xl font-normal sm:text-4xl lg:text-5xl">
-            Your <span className="font-black tracking-tighter">Long Covid</span>{" "}
-            Recipes
+            Your <span className="font-black tracking-tighter">Long Covid</span> Recipes
           </h1>
         </div>
         <p className="text-md mx-3 mt-3 font-medium text-foreground/90 lg:text-2xl">
@@ -30,22 +29,18 @@ export default function Home() {
           >
             <div className="m-0 my-auto flex h-5 w-5 items-center justify-center rounded-full border-2 border-brandDark ">
               {isLongDescVisible && <Arrow className="m-0 h-2 w-2" />}
-              {!isLongDescVisible && (
-                <Arrow className="m-0 h-2 w-2 rotate-180 " />
-              )}
+              {!isLongDescVisible && <Arrow className="m-0 h-2 w-2 rotate-180 " />}
             </div>
             {/* <p className="text-xs">CLOSE</p> */}
           </Button>
           {!isLongDescVisible && (
             <div className="col-span-11 mx-1">
               <p className="text-sm">
-                Many individuals with Long COVID experience flare-ups linked to
-                gluten, dairy, and sugar—hidden culprits in many foods...{" "}
+                Many individuals with Long COVID experience flare-ups linked to gluten, dairy, and sugar—hidden culprits
+                in many foods...{" "}
                 <span
                   className="font-bold text-brandLinkBlue drop-shadow-sm"
-                  onClick={() =>
-                    setIsLongDescVisible((prevState) => !prevState)
-                  }
+                  onClick={() => setIsLongDescVisible((prevState) => !prevState)}
                 >
                   (Continued)
                 </span>
@@ -55,21 +50,18 @@ export default function Home() {
           {isLongDescVisible && (
             <div className="col-span-11 mx-1">
               <p className="text-sm">
-                Many individuals with Long COVID experience flare-ups linked to
-                gluten, dairy, and sugar—hidden culprits in many foods.
+                Many individuals with Long COVID experience flare-ups linked to gluten, dairy, and sugar—hidden culprits
+                in many foods.
               </p>
               <p className="text-sm">
-                Our recipes are organized and sorted specifically to help
-                minimize the impact of Long COVID by giving us access to
-                gluten-free eating, recognizing the role of diet in symptom
-                management.
+                Our recipes are organized and sorted specifically to help minimize the impact of Long COVID by giving us
+                access to gluten-free eating, recognizing the role of diet in symptom management.
               </p>
 
               <p className="text-sm">
-                Here, you'll discover delicious, wholesome meals tailored to
-                avoid these triggers, empowering you to feel better and live
-                healthier. Explore our collection to find your path to a more
-                comfortable, symptom-reduced life.
+                Here, you&apos;ll discover delicious, wholesome meals tailored to avoid these triggers, empowering you
+                to feel better and live healthier. Explore our collection to find your path to a more comfortable,
+                symptom-reduced life.
               </p>
             </div>
           )}

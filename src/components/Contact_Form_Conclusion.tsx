@@ -126,8 +126,8 @@ const Contact_Form_Conclusion = ({ currentPage, totalPages, handleNext, handlePr
                   <div className="space-y-1 leading-none">
                     <FormLabel>I want to get involved and help others. Please contact me.</FormLabel>
                     <FormDescription>
-                      If you feel you can contribute please let us know. Whether you're an expert in your field or a
-                      passionate person with good ideas we'd love to talk to you.
+                      If you feel you can contribute please let us know. Whether you&apos;re an expert in your field or
+                      a passionate person with good ideas we&apos;d love to talk to you.
                     </FormDescription>
                   </div>
                 </FormItem>

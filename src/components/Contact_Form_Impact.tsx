@@ -56,7 +56,7 @@ const Contact_Form_Impact = ({ currentPage, totalPages, handleNext, handlePrev }
     <Card className=" ">
       <CardHeader className="m-0 overflow-clip bg-brandSecondary  px-4 py-4">
         <div className="flex flex-row items-center justify-between">
-          <CardTitle className="m-0 text-xl font-medium">Long COVID's Impact</CardTitle>
+          <CardTitle className="m-0 text-xl font-medium">Long COVID&apos;s Impact</CardTitle>
         </div>
         <div className="relative mx-auto flex w-3/4 justify-between pt-2">
           {paginationProgBar}

@@ -50,8 +50,8 @@ const Contact_Us = () => {
       <div className="grid grid-cols-2 gap-10">
         <div>
           <div>
-            <h2 className="text-2xl">Let Us Know What You're&nbsp;Thinking.</h2>
-            <h2 className="-mx-5 my-5 bg-brandSecondary px-5 py-2 text-5xl">We're here to help</h2>
+            <h2 className="text-2xl">Let Us Know What You&apos;re&nbsp;Thinking.</h2>
+            <h2 className="-mx-5 my-5 bg-brandSecondary px-5 py-2 text-5xl">We&apos;re here to help</h2>
           </div>
 
           <div className="">
@@ -60,7 +60,7 @@ const Contact_Us = () => {
               <span onClick={handleCopy} className="cursor-pointer text-brandPrimary">
                 contact@lovidia.com
               </span>{" "}
-              to let us know about anything that's on your mind.
+              to let us know about anything that&apos;s on your mind.
             </p>
           </div>
         </div>

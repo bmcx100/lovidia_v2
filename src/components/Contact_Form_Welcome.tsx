@@ -74,7 +74,7 @@ const Contact_Form_Impact = ({ currentPage, totalPages, handleNext, handlePrev }
       <Divider />
       <div className="pl-3 pr-3">
         <p className="mt-5 pl-3 text-base font-medium text-brandDark">
-          If you'd prefer to share without the prompts. You can email us at share@lovidia.com or click this form.
+          If you&apos;d prefer to share without the prompts. You can email us at share@lovidia.com or click this form.
         </p>
         <div className="my-5 flex w-full justify-center">
           <Button variant={"outline"} className="h-7 w-3/4">

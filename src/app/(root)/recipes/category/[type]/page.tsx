@@ -39,8 +39,7 @@ export default function Category({ params }: { params: { type: string } }) {
         <div className="bg-primary">
           {/* <h2 className="px-4 py-2 text-2xl font-bold shadow-md shadow-primary/5 lg:text-5xl"> */}
           <h1 className="py-4 pl-2 text-3xl font-normal sm:text-4xl lg:w-[420px] lg:text-5xl">
-            Your <span className="font-black tracking-tighter">Long Covid</span>{" "}
-            Recipes
+            Your <span className="font-black tracking-tighter">Long Covid</span> Recipes
           </h1>
         </div>
 
@@ -62,16 +61,13 @@ export default function Category({ params }: { params: { type: string } }) {
           />
         </div>
         <p className="text-md mx-3 mt-3 font-medium text-foreground/90">
-          Browse our list of {params.type.toLowerCase()} and click to see more
-          details. Use the buttons above to remove recipes that won't agree with
-          you.
+          Browse our list of {params.type.toLowerCase()} and click to see more details. Use the buttons above to remove
+          recipes that won&apos;t agree with you.
         </p>
       </div>
 
       <Link href="/recipes">
-        <p className="ml-2 text-sm font-bold text-brandLinkBlue">
-          ← back to categories
-        </p>
+        <p className="ml-2 text-sm font-bold text-brandLinkBlue">← back to categories</p>
       </Link>
       {filteredRecipes.map((recipe) => {
         return <RecipeSummaryCard key={recipe.id} recipe={recipe} />;

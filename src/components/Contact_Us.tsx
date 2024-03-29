@@ -48,7 +48,7 @@ const Contact_Us = () => {
           <div>
             <h2 className="px-3 text-xl sm:pl-16 sm:text-2xl">Let Us Know What&nbsp;You're&nbsp;Thinking.</h2>
             <h2 className="-mx-5 mb-3 mt-0  bg-brandSecondary  px-8 py-2 text-3xl capitalize sm:pl-20 sm:text-5xl">
-              We're here to&nbsp;help
+              We&apos;re here to&nbsp;help
             </h2>
           </div>
 
