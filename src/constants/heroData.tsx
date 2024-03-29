@@ -1,1 +1,1 @@
-export const navlinks: Navlinks[] = ["home", "symptoms", "contact", "helpers"];
+export const navlinks: string[] = ["home", "symptoms", "contact", "helpers"];
