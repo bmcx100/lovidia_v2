@@ -25,8 +25,6 @@ const Symptoms = () => {
       <h2 className="my-8  text-center text-3xl font-medium lg:text-4xl">Our Symptoms</h2>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} symptomsData={SymptomsData} />
       <div className="mt-6"></div>
-      <Breakpoints />
-      <div className="mt-10"></div>
     </section>
   );
 };
