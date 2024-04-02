@@ -58,15 +58,16 @@ const You = () => {
                 Sign Up for our Newsletter.
               </h3>
               <form onSubmit={handleSubmit}>
-                <div className="my-5 flex justify-between rounded-full bg-white py-2 pl-5 pr-3 focus:outline-none">
+                <div className="my-5 flex justify-between rounded-full  bg-white py-2 pl-2  pr-3 focus:outline-none">
                   <input
                     type="email"
+                    name="email"
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                     value={email}
                     placeholder="Enter your email address"
-                    className="w-full focus:border-white focus:outline-none"
+                    className="w-full rounded-l-full px-3 py-2 focus:border-white focus:outline-none active:bg-white"
                   />
-                  <Button type="submit" className="px-6 sm:px-8">
+                  <Button type="submit" className="-ml-12 px-6 sm:px-8">
                     Subscribe
                   </Button>
                 </div>
@@ -89,18 +90,18 @@ const You = () => {
               </h3>
             </div>
 
-            <div className="mx-5 flex flex-col items-center sm:justify-center md:mx-24 md:mt-8 lg:mx-0 lg:mt-5 lg:h-[56px] lg:w-full lg:flex-row lg:justify-start">
+            <div className="mx-5 flex flex-col items-start sm:justify-center md:mx-24 md:mt-8 lg:mx-0 lg:mt-5 lg:h-[56px] lg:w-full lg:flex-row lg:justify-start">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
-                    <div className="mb-3 mt-6 w-fit self-start rounded-full bg-white lg:m-0">
+                    <div className="mb-3 mt-6 w-fit rounded-full bg-white lg:m-0">
                       <Button
                         onClick={handleCopy}
-                        className="h-[56px] bg-white text-base lowercase sm:self-center lg:mx-0 lg:mt-0"
+                        className="h-[56px] bg-white  text-base lowercase sm:self-center lg:mx-0 lg:mt-0"
                         variant="white"
                       >
                         <Image src="/images/general/copy.svg" alt="copy paste icon" width={20} height={20} />
-                        <div className="ml-1">contact@lovidia.com</div>
+                        <div className="ml-1 text-brandDark/90">contact@lovidia.com</div>
                       </Button>
                     </div>
                   </TooltipTrigger>
@@ -110,9 +111,9 @@ const You = () => {
                 </Tooltip>
               </TooltipProvider>
 
-              <p className="my-2 text-center text-sm font-bold lg:hidden">OR</p>
+              <p className="my-2 self-center text-center text-sm font-bold lg:hidden">OR</p>
               <Link className="mt-3 self-end sm:ml-[50%] sm:self-center lg:m-0 " href="/contact">
-                <Button className=" h-[56px] w-44 py-4 text-base lg:ml-20  ">Contact Form</Button>
+                <Button className=" h-[56px] w-44 self-end py-4 text-base lg:ml-20  ">Contact Form</Button>
               </Link>
             </div>
             <p className="ml-6 mr-4 mt-6 text-base leading-normal sm:ml-16 sm:mt-5 md:mx-10  md:my-10 md:max-w-[580px] lg:mx-0 lg:mt-5 lg:max-w-[400px] ">

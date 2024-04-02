@@ -13,11 +13,11 @@ const Hero = () => {
         <div className="relative flex flex-col items-end gap-5 xs:p-6 sm:px-10 md:px-20 lg:px-10 lg:pt-9 ">
           <h1 className="z-10 w-80 self-start text-3xl font-normal sm:text-4xl lg:w-[420px] lg:text-5xl">
             Your <span className="font-black tracking-tighter">Long COVID </span>
-            Resource Website
+            Resource Center
           </h1>
           <div className="z-1 absolute left-1 top-5 h-2 w-[250px] bg-brandSecondary xs:left-6 xs:top-11 sm:left-10 sm:top-12 sm:w-[310px] md:left-20 md:top-12 lg:left-8 lg:top-16 lg:h-3 lg:w-[410px]"></div>
           <p className="mt-2 w-3/4 min-w-72 xs:mr-4 sm:ml-32 sm:max-w-[320px] sm:self-center sm:text-lg md:max-w-[400px] md:text-xl lg:ml-72 lg:max-w-[430px] lg:py-8 lg:text-2xl">
-            Alleviating symptoms, simplying access to information and leveraging our numbers to create change.
+            Alleviating symptoms, simplifying access to information, and using our collective voice to create change.
           </p>
           <Link href="/contact?type=share">
             <Button variant="default" className="mt-4 lg:px-6 lg:py-4 lg:text-lg">

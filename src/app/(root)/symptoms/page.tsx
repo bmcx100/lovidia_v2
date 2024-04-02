@@ -3,6 +3,8 @@ import React from "react";
 import Link from "next/link";
 import { SymptomsData } from "@/constants/symptomsData";
 import Breakpoints from "@/components/tgg-utils/Breakpoints";
+import Divider from "@/components/Divider";
+import HeroSymptoms from "@/components/HeroSymptoms";
 
 const Symptoms = () => {
   return (
@@ -48,6 +50,8 @@ const Symptoms = () => {
           ))}
         </ul>
       </div>
+      <Divider />
+      <HeroSymptoms />
     </section>
   );
 };

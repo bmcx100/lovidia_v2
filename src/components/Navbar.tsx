@@ -16,18 +16,13 @@ const Navbar = () => {
     <div className=" mx-auto flex w-full max-w-[1024px] items-center justify-between px-8 py-3 md:px-12 md:py-6">
       <Link href="/">
         <div className="mt-2 flex flex-col items-center justify-start">
-          <Image
-            src="/images/general/logo.svg"
-            alt="lovidia logo"
-            width={60}
-            height={60}
-          />
+          <Image src="/images/general/logo.svg" alt="lovidia logo" width={60} height={60} />
           <p className="mt-0 text-center text-lg font-medium">lovidia</p>
         </div>
       </Link>
       <div className="flex items-center gap-x-8 font-medium">
         <Link href="/symptoms">Symptoms</Link>
-        <Link href="/helpers">Helpers</Link>
+        <Link href="/resources">Resources</Link>
         <Button className="text-base font-medium">
           <Link href="/contact">Tell Us Your Story</Link>
         </Button>
@@ -62,8 +57,8 @@ const Navbar = () => {
               Symptoms
             </Link>
 
-            <Link href="/helpers" onClick={() => setOpen(false)}>
-              Helpers
+            <Link href="/resources" onClick={() => setOpen(false)}>
+              Resources
             </Link>
             <div className="-mt-4 ml-4  flex flex-col">
               <Link href="/recipes" onClick={() => setOpen(false)}>

@@ -38,7 +38,6 @@ const Contact_Us = () => {
 
   const localHandleSubmit = (values: z.infer<typeof formSchemaContactUs>) => {
     console.log(values);
-    console.log("Julz is a smelly butt");
     sendContactUs(values);
     form.reset();
     toast({
@@ -63,15 +62,15 @@ const Contact_Us = () => {
       <div className="mx-auto  max-w-[1024px] ">
         <div>
           <div>
-            <h2 className="px-3 text-xl sm:pl-16 sm:text-2xl">Let Us Know What&nbsp;You&apos;re&nbsp;Thinking.</h2>
+            <h2 className="px-3 text-xl sm:pl-16 sm:text-2xl">We&apos;re&nbsp;Listening</h2>
             <h2 className="-mx-5 mb-3 mt-0  bg-brandSecondary  px-8 py-2 text-3xl capitalize sm:pl-20 sm:text-5xl">
-              We&apos;re here to&nbsp;help
+              Tell Us Your&nbsp;Story
             </h2>
           </div>
 
           <div className=" px-3  text-sm sm:pl-16 sm:text-base">
             <p>
-              You can also always email us at{" "}
+              Alternatively, if you would prefer email you can contact us at{" "}
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
@@ -85,8 +84,7 @@ const Contact_Us = () => {
                     <p className="m-0">Click to Copy to Clipboard</p>
                   </TooltipContent>
                 </Tooltip>
-              </TooltipProvider>{" "}
-              to let us know whatever&nbsp;is on your&nbsp;mind.
+              </TooltipProvider>
             </p>
           </div>
         </div>

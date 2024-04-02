@@ -30,10 +30,10 @@ const SymptomCard: React.FC<SymptomDataPropsType> = ({ symptom }) => {
           ))}
         </div>
 
-        <div className="mx-3 sm:mx-8 sm:mt-12 md:mx-12 md:mt-16 lg:mx-32">
-          <h4 className="mx-2 mt-6 text-lg font-bold">Sections:</h4>
+        <div className="mx-3 mt-8 sm:mx-8 sm:mt-12 md:mx-12 md:mt-16 lg:mx-32">
           <div className="mt-0 grid grid-cols-2">
             <div id="sections">
+              <h4 className="mx-2 mt-0 text-lg font-bold">Sections:</h4>
               <div className="mt-4 flex h-full flex-col items-center justify-start space-y-3 pr-4">
                 <Link href="#symptoms" className="w-full max-w-[180px]">
                   <Button variant="secondary" className="text-md h-fit w-full py-1 text-primary">
@@ -50,18 +50,18 @@ const SymptomCard: React.FC<SymptomDataPropsType> = ({ symptom }) => {
                     Medications
                   </Button>
                 </Link>
-                <Button variant="secondary" className="text-md h-fit w-full max-w-[180px] py-1 text-primary">
+                {/* <Button variant="secondary" className="text-md h-fit w-full max-w-[180px] py-1 text-primary">
                   Studies
                 </Button>
                 <Button variant="secondary" className="text-md h-fit w-full max-w-[180px] py-1 text-primary">
-                  In the News
-                </Button>
+                  In The News
+                </Button> */}
               </div>
             </div>
 
-            <div id="disclaimer" className="mt-4">
-              <h4 className="text-xs font-black uppercase text-red-600/70">Warning / Legal Disclaimer</h4>
-              <p className="text-xs">
+            <div id="disclaimer" className=" mt-2 md:mt-3">
+              <h4 className="text-sm font-black uppercase text-red-600/70">Warning</h4>
+              <p className="text-sm">
                 Below is a list of what other community members have experienced for symptoms, treatments and
                 medications. This is meant to provide you with the information necessary to educate yourself and see
                 that you aren’t alone.{" "}
@@ -76,7 +76,7 @@ const SymptomCard: React.FC<SymptomDataPropsType> = ({ symptom }) => {
         <div className=" mx-auto max-w-[1024px]">
           <h4 className="text-xl font-bold text-brandSecondary">Please Help Another</h4>
           <p className="ml-6 mr-3 text-base md:mx-10 md:mt-5 lg:mx-12 ">
-            Your Long COVID symptoms provide clues to help others. Please share your thoughts with us and together we
+            Your Long COVID symptoms provide clues to help others. Please share your experience with us and together we
             may provide another with relief.
           </p>
           <div className="flex w-full justify-end ">
@@ -89,7 +89,15 @@ const SymptomCard: React.FC<SymptomDataPropsType> = ({ symptom }) => {
 
       <div id="symptoms" className="">
         <div className=" mx-auto max-w-[1024px]">
-          <h4 className="mt-6 bg-brandSecondary px-6 py-2 text-lg font-medium uppercase text-brandDark">Symptoms:</h4>
+          <div className="mt-6 flex items-center justify-between bg-brandSecondary px-6 py-2">
+            <h4 className="text-lg font-medium uppercase text-brandDark">Symptoms:</h4>
+            <div className="flex items-center gap-x-2 text-brandLinkBlue">
+              <Link href="#" className="text-sm font-medium text-brandLinkBlue sm:text-base sm:font-bold">
+                back to top
+              </Link>
+              <p className=" pb-3 font-bold">↑</p>
+            </div>
+          </div>
           <div className="">
             {/* {symptom.symptoms.map((symptom, index) => {
             return (
@@ -121,7 +129,16 @@ const SymptomCard: React.FC<SymptomDataPropsType> = ({ symptom }) => {
 
       <div id="treatments" className="">
         <div className=" mx-auto max-w-[1024px]">
-          <h4 className="mt-6 bg-brandDark px-6 py-2 text-lg font-medium uppercase text-brandSecondary">Treatments:</h4>
+          <div className="mt-6 flex items-center justify-between bg-brandDark px-6 py-2">
+            <h4 className="text-lg font-medium uppercase text-brandSecondary">Treatments:</h4>
+            <div className="flex items-center gap-x-2 text-brandLinkBlue">
+              <Link href="#" className="text-sm font-medium text-brandLinkBlue sm:text-base sm:font-bold">
+                back to top
+              </Link>
+              <p className=" pb-3 font-bold">↑</p>
+            </div>
+          </div>
+
           {symptom.treatments.map((treatment, index) => {
             const parts = treatment.split(":"); // Split the symptom text at the colon
             const firstPart = parts[0] + (parts.length > 1 ? ":" : ""); // Add the colon back to the end of the first part
@@ -142,9 +159,16 @@ const SymptomCard: React.FC<SymptomDataPropsType> = ({ symptom }) => {
 
       <div id="medications" className="">
         <div className=" mx-auto max-w-[1024px]">
-          <h4 className="mt-6 bg-brandSecondary px-6 py-2 text-lg font-medium uppercase text-brandDark">
-            Medications:
-          </h4>
+          <div className="mt-6 flex items-center justify-between bg-brandSecondary px-6 py-2">
+            <h4 className="text-lg font-medium uppercase text-brandDark">Medications:</h4>
+            <div className="flex items-center gap-x-2 text-brandLinkBlue">
+              <Link href="#" className="text-sm font-medium text-brandLinkBlue sm:text-base sm:font-bold">
+                back to top
+              </Link>
+              <p className=" pb-3 font-bold">↑</p>
+            </div>
+          </div>
+
           {symptom.medications.map((medication, index) => {
             const parts = medication.split(":"); // Split the symptom text at the colon
             const firstPart = parts[0] + (parts.length > 1 ? ":" : ""); // Add the colon back to the end of the first part

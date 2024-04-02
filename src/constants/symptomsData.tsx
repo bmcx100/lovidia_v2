@@ -5,7 +5,7 @@ export const SymptomsData = [
     imageUrl: "brain-fog.png",
     description: [
       "People experiencing brain fog often feel mentally drained and struggle with various cognitive functions. Some common signs of brain fog include reduced cognitive functioning or difficulty with paying attention, keeping focus, multitasking, and memory recall. It can feel like mild memory loss, unusual forgetfulness, fuzzy memory, or sluggishness when trying to remember names, dates, where you put your keys, and other important things.",
-      "Additionally, brain fog may lead to confusion, spaciness, and challenges in processing information. While it is not a medical term or diagnosis, brain fog can be associated with other conditions such as attention deficit hyperactivity disorder (ADHD), chronic pain, sleep disorders, eating disorders, nutritional deficiencies, and other complex health issues.",
+      "Additionally, brain fog may lead to confusion, spaciness, and challenges in processing information. While it is not a medical term or diagnosis, brain fog can be associated with other conditions such as chronic pain, sleep disorders, nutritional deficiencies, and other complex health issues.",
     ],
     symptoms: [
       "Unusual forgetfulness: Difficulty recalling names, dates, where you placed your keys, and other important information.",
