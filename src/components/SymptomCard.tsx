@@ -169,17 +169,19 @@ const SymptomCard: React.FC<SymptomDataPropsType> = ({ symptom }) => {
             </div>
           </div>
 
-          <p>
-            The following medications have been gathered from various sources and have not been vetted. They are listed
-            for you to research and better understand your options when speaking with your doctor.{" "}
-            <span className="font-bold text-black">
-              WE HAVE NO SPECIFIC INFORMATION THAT SUGGESTS THESE MEDICATIONS WILL BE HELPFUL FOR THIS OR ANY LONG COVID
-              RELATED CONDITION.
-            </span>
-          </p>
-          <p className="mt-5 bg-red-600 p-2 text-center font-bold text-white">
-            DO NOT TAKE THESE MEDICATIONS WITHOUT THE EXPRESS RECOMMENDATION OF A MEDICAL PROFESSIONAL.
-          </p>
+          <div className="mx-3">
+            <p>
+              The following medications have been gathered from various sources and have not been vetted. They are
+              listed for you to research and better understand your options when speaking with your doctor.{" "}
+              <span className="font-bold text-black">
+                WE HAVE NO SPECIFIC INFORMATION THAT SUGGESTS THESE MEDICATIONS WILL BE HELPFUL FOR THIS OR ANY LONG
+                COVID RELATED CONDITION.
+              </span>
+            </p>
+            <p className="mt-5 bg-red-600 p-2 text-center font-bold text-white">
+              DO NOT TAKE THESE MEDICATIONS WITHOUT THE EXPRESS RECOMMENDATION OF A MEDICAL PROFESSIONAL.
+            </p>
+          </div>
           {symptom.medications.map((medication, index) => {
             const parts = medication.split(":"); // Split the symptom text at the colon
             const firstPart = parts[0] + (parts.length > 1 ? ":" : ""); // Add the colon back to the end of the first part

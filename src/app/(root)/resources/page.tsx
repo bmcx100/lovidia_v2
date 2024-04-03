@@ -37,8 +37,8 @@ export default function Resources() {
               <span className="font-bold">You Need To Make The Change For&nbsp;1&nbsp;Month.</span>
             </p>
 
-            <Link href="/contact" className="mx-auto mt-1 w-3/4 lg:mt-5">
-              <Button className="w-full text-base font-bold">Has Your Diet Changed?</Button>
+            <Link href="/recipes" className="mx-auto mt-1 w-3/4 lg:mt-5">
+              <Button className="w-full text-base font-bold">View Recipes</Button>
             </Link>
           </div>
         </div>
