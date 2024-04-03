@@ -1,5 +1,5 @@
 import RecipeCard from "@/components/RecipeCard";
-import { RecipesData } from "@/constants/recipesData";
+import { RecipeType, RecipesData } from "@/constants/recipesData";
 import React from "react";
 
 // {params.type}

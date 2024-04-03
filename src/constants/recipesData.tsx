@@ -38,7 +38,7 @@ export const RecipeCategoriesData = [
   },
 ];
 
-export const RecipesData = [
+export const RecipesData: RecipeType[] = [
   {
     id: 1,
     isFeatured: false,
@@ -243,6 +243,8 @@ export const RecipesData = [
   },
   {
     id: 6,
+    isFeatured: false,
+    creator: "Anonymous",
     category: "Dinner",
     imageFilename: "butternut_squash_risotto.png",
     title: "Butternut Squash Risotto",
@@ -280,6 +282,8 @@ export const RecipesData = [
   },
   {
     id: 7,
+    isFeatured: false,
+    creator: "Anonymous",
     category: "Dinner",
     imageFilename: "thai_green_curry_tofu.png",
     title: "Thai Green Curry with Tofu",
@@ -317,6 +321,8 @@ export const RecipesData = [
   },
   {
     id: 8,
+    isFeatured: false,
+    creator: "Anonymous",
     category: "Dinner",
     imageFilename: "lentil_soup_spinach.png",
     title: "Lentil Soup with Spinach",
@@ -354,6 +360,8 @@ export const RecipesData = [
   },
   {
     id: 9,
+    isFeatured: false,
+    creator: "Anonymous",
     category: "Dinner",
     imageFilename: "shrimp_mango_salad.png",
     title: "Shrimp and Mango Salad",
@@ -389,6 +397,8 @@ export const RecipesData = [
   },
   {
     id: 10,
+    isFeatured: false,
+    creator: "Anonymous",
     category: "Dinner",
     imageFilename: "turkey_meatballs_zucchini_noodles.png",
     title: "Turkey Meatballs with Zucchini Noodles",
