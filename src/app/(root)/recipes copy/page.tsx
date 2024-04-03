@@ -1,6 +1,6 @@
 "use client";
 
-import RecipeCategoryCarousel from "@/components/RecipeCategoryCarousel";
+import RecipeCategoryCarousel from "@/components/RecipeCarousel";
 import { Button } from "@/components/ui/button";
 import { RecipeCategoriesData } from "@/constants/recipesData";
 import { TriangleIcon as Arrow } from "lucide-react";

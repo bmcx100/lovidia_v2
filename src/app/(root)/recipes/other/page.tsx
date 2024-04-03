@@ -13,7 +13,7 @@ export default function Home() {
   const [isLongDescVisible, setIsLongDescVisible] = React.useState(false);
   return (
     <section className="mx-auto w-screen min-w-[330px] max-w-[1024px] ">
-      <div className="mt-0">
+      <div className="mt-2">
         <div className="bg-primary">
           {/* <h2 className="px-4 py-2 text-2xl font-bold shadow-md shadow-primary/5 lg:text-5xl"> */}
           <h1 className="py-4 pl-2 text-3xl font-normal sm:text-4xl lg:text-5xl">
@@ -31,18 +31,16 @@ export default function Home() {
           }
         })}
       </div>
-      <div className="hidden flex-wrap justify-between gap-x-3 gap-y-5 lg:flex">
-        {RecipesData.map((recipe, index) => {
-          if (index < 7 && !recipe.isFeatured) {
-            return <RecipeSummaryCard key={recipe.id} recipe={recipe} />;
-          }
+      <div className="flex flex-wrap gap-x-3 gap-y-5">
+        {RecipesData.map((recipe) => {
+          return <RecipeSummaryCard key={recipe.id} recipe={recipe} />;
         })}
       </div>
-      <div className="mt-8 lg:hidden">
+      {/* <div className="mt-16">
         <div className="bg-brandDark pb-10 pt-2">
           <RecipeCarousel category="Dinner" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

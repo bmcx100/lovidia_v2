@@ -34,13 +34,13 @@ const RecipeSummaryCard: React.FC<RecipePropsType> = ({ recipe }) => {
     <div>
       <Card
         key="recipe.id"
-        className="mt-5 flex h-full max-w-[600px] flex-col justify-between  overflow-hidden shadow-md sm:max-w-[300px]"
+        className="mt-5  flex h-full max-w-[600px] flex-col justify-between overflow-hidden  bg-brandSecondary/20 shadow-md sm:max-w-[300px]"
       >
         <CardHeader className="p-0">
           <div className="relative h-[300px] w-screen sm:w-[300px]">
             <Link href={`/recipes/${recipe.id}`}>
               <Image
-                src={`/images/recipes${recipe.imageFilename}`}
+                src={`/images/recipes/meals/${recipe.imageFilename}`}
                 alt="picture of a pizza"
                 layout="fill"
                 objectFit="cover"
@@ -89,11 +89,16 @@ const RecipeSummaryCard: React.FC<RecipePropsType> = ({ recipe }) => {
         <div className="mx-6 mb-0 mt-3 flex flex-col justify-between">
           <CardTitle className=" text-2xl">{recipe.title}</CardTitle>
           <CardDescription>
-            <span className="font-bold">Ingredients:</span> {recipe.ingredients}
+            <p>
+              <span className="font-bold">Total Time:</span> {recipe.cookingTime.total} minutes
+            </p>
+            <p>
+              <span className="font-bold">Creator:</span> {recipe.creator}
+            </p>
           </CardDescription>
           <CardContent></CardContent>
         </div>
-        <CardFooter className="mt-auto bg-secondary  p-3">
+        <CardFooter className="mt-0 flex justify-end bg-secondary  p-3">
           <Link href={`/recipes/${recipe.id}`}>
             <Button className="w-full "> View Recipe</Button>
           </Link>

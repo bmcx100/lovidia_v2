@@ -33,7 +33,7 @@ export default function Resources() {
               So many of us have seen huge improvements in our symptoms from changing our daily meal plans.
             </p>
             <p className="mt-0 text-sm lg:mt-2 lg:text-base">
-              If you haven&apos;t changed your eating habbits to see the difference.{" "}
+              If you haven&apos;t changed your eating habits to see the difference.{" "}
               <span className="font-bold">You Need To Make The Change For&nbsp;1&nbsp;Month.</span>
             </p>
 
@@ -46,7 +46,7 @@ export default function Resources() {
           <div className="mx-auto gap-5 lg:flex lg:flex-row-reverse">
             <div className="mx-auto h-[220px] w-auto overflow-clip lg:h-[330px]">
               <Image
-                src={`/images/resources/research.png`}
+                src={`/images/resources/news.png`}
                 alt={`Image of a couple doing research`}
                 width={549}
                 height={330}
@@ -54,7 +54,7 @@ export default function Resources() {
               />
             </div>
             <div className="flex max-w-lg flex-col items-start justify-center gap-3">
-              <h3 className="self-center font-bold uppercase lg:text-3xl">Research</h3>
+              <h3 className="self-center font-bold uppercase lg:text-3xl">News</h3>
               <p className="text-sm lg:text-base">
                 We want to provide you with easier access to the information you&apos;re looking for on Long&nbsp;COVID.
               </p>
