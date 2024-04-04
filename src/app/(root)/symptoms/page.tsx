@@ -8,11 +8,9 @@ import HeroSymptoms from "@/components/HeroSymptoms";
 
 const Symptoms = () => {
   return (
-    <section className="mx-0 mt-2 min-w-[330px]  sm:mt-6">
-      <div className="mx-auto  max-w-[1024px] ">
-        <h2 className="-mx-5 mb-3 mt-0  bg-brandSecondary px-8 py-2 text-3xl capitalize sm:pl-20 sm:text-5xl">
-          Our&nbsp;Symptoms
-        </h2>
+    <section className="mx-0 mt-2 min-w-[330px] sm:mt-6">
+      <div className="mx-auto my-0 w-full max-w-[1024px] bg-brandSecondary ">
+        <h2 className="mx-5 my-0  py-2 text-3xl capitalize md:pl-20 md:text-5xl">Our&nbsp;Symptoms</h2>
       </div>
       <div className="mx-auto  max-w-[1024px] ">
         <div className="mx-5 mt-0 space-y-5 md:mx-4 md:mt-8  lg:mx-16 lg:mt-12 ">
