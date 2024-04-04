@@ -1,48 +1,142 @@
-import BreakpointIdentifier from "@/components/tgg-utils/BreakpointIdentifier";
-import React from "react";
-import Link from "next/link";
+"use client";
+
+import { subscribeToNewsletter } from "@/hooks/subscribeToNewsletter";
+import { useToast } from "@/components/ui/use-toast";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Breakpoints from "@/components/tgg-utils/Breakpoints";
+import { NewsData } from "@/constants/newsData";
+import React, { useState } from "react";
+import Link from "next/link";
 
-export default function News() {
+export default function Home() {
+  const [email, setEmail] = useState<string>("");
+  const { toast } = useToast();
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    // Add your subscription logic here
+    if (email) {
+      console.log("Subscribing with email:", email);
+      subscribeToNewsletter(email);
+      setEmail("");
+      toast({
+        title: "Newsletter Sign Up Complete",
+        description: "Thank you for signing up. We appreciate your support.",
+      });
+    }
+  };
+
   return (
-    <section className="mx-0 mt-6 min-w-[330px]">
-      <h2 className="mx-auto my-3 w-full rounded-sm bg-brandSecondary px-5 py-2 text-center text-4xl font-medium lg:my-8 lg:text-5xl">
-        Our Helpers
-      </h2>
-      <div className="mx-4 mt-0 flex flex-col gap-5 text-lg lg:mt-10">
-        <div className="mx-4 mt-0 flex flex-col gap-5 text-lg lg:mt-10">
-          <div className="mx-auto gap-5 lg:flex lg:flex-row-reverse">
-            <div className="mx-auto h-[220px] w-auto overflow-clip lg:h-[330px]">
-              <Image
-                src={`/images/helpers/research.png`}
-                alt={`Image of a couple doing research`}
-                width={549}
-                height={330}
-                className="mt-4"
+    <section className="mx-0 mt-2 min-w-[330px] sm:mt-6">
+      <div className="mx-auto my-0 max-w-[1024px] ">
+        <h2 className="-mx-5 my-0  bg-brandSecondary px-8 py-2 text-3xl capitalize md:pl-20 md:text-5xl">
+          In the news
+        </h2>
+      </div>
+      <div className="mx-0 mt-0 w-screen bg-brandPrimary py-6">
+        <div className="flex-col items-start justify-start lg:h-[300px] ">
+          <h3 className="ml-5 mt-0 pb-0 text-lg font-bold capitalize sm:ml-10 sm:mt-5 md:text-2xl lg:ml-0 lg:mt-10">
+            Sign Up for our Newsletter.
+          </h3>
+          <form onSubmit={handleSubmit}>
+            <div className="mx-5 my-5 flex justify-between rounded-full  bg-white py-2 pl-2  pr-3 focus:outline-none">
+              <input
+                type="email"
+                name="email"
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+                value={email}
+                placeholder="Enter your email address"
+                className="w-full rounded-l-full px-3 py-2 focus:border-white focus:outline-none active:bg-white"
               />
+              <Button type="submit" className="-ml-12 px-6 sm:px-8">
+                Subscribe
+              </Button>
             </div>
-            <div className="flex max-w-lg flex-col items-start justify-center gap-3">
-              <h3 className="self-center font-bold uppercase lg:text-3xl">Research</h3>
-              <p className="text-sm lg:text-base">
-                We want to provide you with easier access to the information you&apos;re looking for on Long&nbsp;COVID.
-              </p>
-              <p className="mt-0 text-sm lg:mt-2 lg:text-base">
-                Too many of us are wasting time looking for the same things.{" "}
-                <span className="font-bold">Let&apos;s work together.</span>
-              </p>
+          </form>
 
-              <Link href="/contact" className="mx-auto mt-1 w-3/4 lg:mt-5">
-                <Button className="w-full text-base font-bold">What Are You Researching?</Button>
-              </Link>
-            </div>
-          </div>
+          <p className=" ml-4 mr-2 mt-2  max-w-[420px] leading-normal sm:ml-16 sm:mt-5 md:-ml-20 md:max-w-none lg:ml-0 lg:mt-0 lg:max-w-[400px]">
+            Receive your news updates via email and be a number to{" "}
+            <span className="text-lg font-bold"> help us affect change</span>.
+          </p>
         </div>
       </div>
-
-      {/* <Breakpoints /> */}
-      <div className="mt-6"></div>
+      <div className="mx-auto  max-w-[1024px] ">
+        <div className="">
+          {NewsData.map((article) => {
+            if (article.isFeatured) {
+              return (
+                <div key={article.id} className=" bg-grid-2 p-3">
+                  <div className="items-center justify-between lg:flex">
+                    <div className="relative mx-auto aspect-video w-screen md:w-[400px] md:max-w-[600px] lg:w-[600px]">
+                      <Image
+                        src={`/images/news/${article.image}`}
+                        alt="picture of a pizza"
+                        // layout="fill"
+                        fill
+                        objectFit="contain"
+                        // className=`{${article.imageW} ${article.imageH}}`
+                        className="h-full w-full"
+                      />
+                    </div>
+                    <div>
+                      <div className="mt-1 flex justify-between text-sm">
+                        <p className="uppercase">{article.source}</p>
+                        <p>{article.date}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="mt-1 font-bold">{article.headline}</h3>
+                    <p className="hidden">{article.description}</p>
+                    <Link href={article.link} target="_blank">
+                      <p className="mt-1 w-full overflow-clip text-nowrap text-sm font-medium text-brandLinkBlue">
+                        {article.link}
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+              );
+            }
+          })}
+        </div>
+        <div className="">
+          {NewsData.map((article, index) => {
+            if (!article.isFeatured && index < 10) {
+              return (
+                <div key={article.id} className={`p-4 ${index % 2 === 0 ? "bg-grid-1/20" : "bg-grid-2"}`}>
+                  <div className="items-center justify-between lg:flex">
+                    <div>
+                      <div className="mt-1 flex justify-between text-sm">
+                        <p className="uppercase">{article.source}</p>
+                        <p>{article.date}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="mt-1 font-bold">{article.headline}</h3>
+                    <p className="hidden">{article.description}</p>
+                    <Link href={article.link} target="_blank">
+                      <p className="mt-1 w-full overflow-clip text-nowrap text-sm font-medium text-brandLinkBlue">
+                        {article.link}
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+              );
+            }
+          })}
+        </div>
+        <div className="mx-12 hidden flex-col justify-between gap-x-3 gap-y-5 lg:flex">
+          {NewsData.map((article, index) => {
+            if (index < 10 && !article.isFeatured) {
+              return (
+                <div key={article.id}>
+                  <p>{article.headline}</p>
+                </div>
+              );
+            }
+          })}
+        </div>
+      </div>
     </section>
   );
 }

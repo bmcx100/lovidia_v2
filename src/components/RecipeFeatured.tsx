@@ -35,13 +35,13 @@ const greyStarEl = (
 
 const RecipeFeatured: React.FC<RecipePropsType> = ({ recipe }) => {
   return (
-    <div className="mx-auto mt-5  w-screen min-w-[330px]  max-w-[1024px] overflow-hidden rounded-lg bg-brandSecondary/20">
+    <div className="mx-auto mt-5  w-full min-w-[330px]  max-w-[1024px] overflow-hidden rounded-lg bg-brandSecondary/20">
       {/* <Breakpoints /> */}
       <div className="bg-brandDark px-5 py-3">
         <h1 className="text-lg font-medium text-brandLight/90 md:text-2xl">{recipe.title}</h1>
       </div>
       <div className="md:flex">
-        <div className="relative mt-0 aspect-video w-screen md:max-w-[500px] lg:max-w-[600px]">
+        <div className="relative mt-0 aspect-video w-full md:max-w-[500px] lg:max-w-[600px]">
           <Image
             src={`/images/recipes/meals/${recipe.imageFilename}`}
             alt="picture of a pizza"
@@ -69,9 +69,10 @@ const RecipeFeatured: React.FC<RecipePropsType> = ({ recipe }) => {
           </div>
         </div>
       </div>
-      <div className="mt-5 md:mt-12"></div>
-      <Divider />
-      <div className="mt-3 px-3">
+      <div className="mt-5 md:mt-12 md:hidden ">
+        <Divider />
+      </div>
+      <div className="mt-3 px-3 md:mt-6">
         <div className="flex flex-wrap items-start justify-around pl-0 lg:hidden">
           <p>
             <span className="text-nowrap font-bold md:text-xl">Creator:</span> {recipe.creator}

@@ -10,7 +10,7 @@ export default function ContactHome() {
   // console.log(searchParams.get("type"));
 
   return (
-    <div className="mx-2 mt-3">
+    <div className="mx-2 mt-2 sm:mt-6 ">
       {/* <Contact_Form_Control /> */}
       <Contact_Us />
     </div>

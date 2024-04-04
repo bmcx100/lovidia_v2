@@ -7,7 +7,7 @@ import Breakpoints from "@/components/tgg-utils/Breakpoints";
 
 export default function Resources() {
   return (
-    <section className="mx-0 mt-6 min-w-[330px]">
+    <section className="mx-0 mt-2 min-w-[330px] sm:mt-6">
       <div className="mx-auto  max-w-[1024px] ">
         <h2 className="-mx-5 mb-3 mt-0  bg-brandSecondary  px-8 py-2 text-3xl capitalize sm:pl-20 sm:text-5xl">
           Our&nbsp;Resources
@@ -16,7 +16,7 @@ export default function Resources() {
       {/* <h2 className="mx-auto my-3 w-full rounded-sm bg-brandSecondary px-5 py-2 text-center text-4xl font-medium lg:my-8 lg:text-5xl">
         Our Resources
       </h2> */}
-      <div className="mx-4 mt-0 flex flex-col gap-5 text-lg lg:mt-10">
+      <div className=" mx-4 mx-auto mt-0 flex max-w-[1024px] flex-col gap-5 text-lg lg:mt-10">
         <div className="mx-auto gap-5 lg:flex">
           <div className="mx-auto h-[220px] w-auto overflow-clip lg:h-[330px]">
             <Image
@@ -34,7 +34,7 @@ export default function Resources() {
             </p>
             <p className="mt-0 text-sm lg:mt-2 lg:text-base">
               If you haven&apos;t changed your eating habits to see the difference.{" "}
-              <span className="font-bold">You Need To Make The Change For&nbsp;1&nbsp;Month.</span>
+              <span className="font-bold">You Need To Make The Change For&nbsp;1&nbsp;Week.</span>
             </p>
 
             <Link href="/recipes" className="mx-auto mt-1 w-3/4 lg:mt-5">
@@ -63,8 +63,8 @@ export default function Resources() {
                 <span className="font-bold">Let&apos;s&nbsp;work&nbsp;together.</span>
               </p>
 
-              <Link href="/contact" className="mx-auto mt-1 w-3/4 lg:mt-5">
-                <Button className="w-full text-base font-bold">What Are You Researching?</Button>
+              <Link href="/news" className="mx-auto mt-1 w-3/4 lg:mt-5">
+                <Button className="w-full text-base font-bold">View The News</Button>
               </Link>
             </div>
           </div>

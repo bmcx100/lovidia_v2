@@ -111,7 +111,8 @@ const Contact_Us = () => {
                           <SelectContent>
                             <SelectItem value="select">Select An Option</SelectItem>
                             <SelectItem value="share">Share Your Story</SelectItem>
-                            <SelectItem value="suggestion">Suggestion for Lovidia</SelectItem>
+                            <SelectItem value="suggestion">Suggestion For Lovidia</SelectItem>
+                            <SelectItem value="help">Want To Help</SelectItem>
                             <SelectItem value="recipe">Recipe Submission</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>

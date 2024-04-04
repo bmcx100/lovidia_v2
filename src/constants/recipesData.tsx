@@ -2,6 +2,7 @@ export interface RecipeType {
   id: number;
   isFeatured: boolean;
   creator: string;
+  serves: number;
   category: string;
   imageFilename: string;
   title: string;
@@ -43,6 +44,7 @@ export const RecipesData: RecipeType[] = [
     id: 1,
     isFeatured: false,
     creator: "Anonymous",
+    serves: 4,
     category: "Dinner",
     imageFilename: "quinoa_stuffed_bell_peppers.png",
     title: "Quinoa Stuffed Bell Peppers",
@@ -83,6 +85,7 @@ export const RecipesData: RecipeType[] = [
     id: 2,
     isFeatured: true,
     creator: "Anonymous",
+    serves: 4,
     category: "Dinner",
     imageFilename: "grilled_salmon_asparagus.png",
     title: "Grilled Salmon with Asparagus",
@@ -117,6 +120,7 @@ export const RecipesData: RecipeType[] = [
     id: 3,
     isFeatured: false,
     creator: "Anonymous",
+    serves: 4,
     category: "Dinner",
     imageFilename: "chicken_broccoli_stir_fry.png",
     title: "Chicken and Broccoli Stir-Fry",
@@ -160,6 +164,7 @@ export const RecipesData: RecipeType[] = [
     id: 4,
     isFeatured: false,
     creator: "Anonymous",
+    serves: 4,
     category: "Dinner",
     imageFilename: "beef_vegetable_kebabs.png",
     title: "Beef and Vegetable Kebabs",
@@ -202,6 +207,7 @@ export const RecipesData: RecipeType[] = [
     id: 5,
     isFeatured: false,
     creator: "Anonymous",
+    serves: 5,
     category: "Dinner",
     imageFilename: "ratatouille.png",
     title: "Ratatouille",
@@ -245,6 +251,7 @@ export const RecipesData: RecipeType[] = [
     id: 6,
     isFeatured: false,
     creator: "Anonymous",
+    serves: 4,
     category: "Dinner",
     imageFilename: "butternut_squash_risotto.png",
     title: "Butternut Squash Risotto",
@@ -284,6 +291,7 @@ export const RecipesData: RecipeType[] = [
     id: 7,
     isFeatured: false,
     creator: "Anonymous",
+    serves: 4,
     category: "Dinner",
     imageFilename: "thai_green_curry_tofu.png",
     title: "Thai Green Curry with Tofu",
@@ -323,6 +331,7 @@ export const RecipesData: RecipeType[] = [
     id: 8,
     isFeatured: false,
     creator: "Anonymous",
+    serves: 4,
     category: "Dinner",
     imageFilename: "lentil_soup_spinach.png",
     title: "Lentil Soup with Spinach",
@@ -362,6 +371,7 @@ export const RecipesData: RecipeType[] = [
     id: 9,
     isFeatured: false,
     creator: "Anonymous",
+    serves: 4,
     category: "Dinner",
     imageFilename: "shrimp_mango_salad.png",
     title: "Shrimp and Mango Salad",
@@ -399,6 +409,7 @@ export const RecipesData: RecipeType[] = [
     id: 10,
     isFeatured: false,
     creator: "Anonymous",
+    serves: 4,
     category: "Dinner",
     imageFilename: "turkey_meatballs_zucchini_noodles.png",
     title: "Turkey Meatballs with Zucchini Noodles",

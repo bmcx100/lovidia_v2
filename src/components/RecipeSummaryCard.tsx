@@ -34,10 +34,10 @@ const RecipeSummaryCard: React.FC<RecipePropsType> = ({ recipe }) => {
     <div>
       <Card
         key="recipe.id"
-        className="mt-5  flex h-full max-w-[600px] flex-col justify-between overflow-hidden  bg-brandSecondary/20 shadow-md sm:max-w-[300px]"
+        className="mt-5 flex h-full w-full max-w-[600px] flex-col justify-between overflow-hidden  bg-brandSecondary/20 shadow-md sm:max-w-[280px]"
       >
         <CardHeader className="p-0">
-          <div className="relative h-[300px] w-screen sm:w-[300px]">
+          <div className="relative aspect-video h-[200px] w-screen sm:w-[300px]">
             <Link href={`/recipes/${recipe.id}`}>
               <Image
                 src={`/images/recipes/meals/${recipe.imageFilename}`}

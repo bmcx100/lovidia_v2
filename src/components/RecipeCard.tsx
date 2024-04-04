@@ -42,7 +42,7 @@ const RecipeCard: React.FC<RecipePropsType> = ({ recipe }) => {
         <h1 className="text-2xl font-medium text-brandLight/90">{recipe.title}</h1>
       </div>
       <div className="md:flex  md:bg-brandSecondary/20">
-        <div className="relative aspect-video w-screen md:w-[600px] md:max-w-[600px]">
+        <div className="relative aspect-video w-screen md:w-[400px] md:max-w-[600px] lg:w-[600px]">
           <Image
             src={`/images/recipes/meals/${recipe.imageFilename}`}
             alt="picture of a pizza"
@@ -56,19 +56,21 @@ const RecipeCard: React.FC<RecipePropsType> = ({ recipe }) => {
             {recipe.isSugarFree && <DietaryRestrictionsBadge iconType="sugarFree" />}
           </div>
         </div>
-        <div className="mt-10 pl-4">
-          <div className="mb-6 mt-6 pl-0">
-            <h3 className="text-xl font-bold tracking-tight">Details:</h3>
-            <p className="text-normal mt-4 text-nowrap pl-5">
-              <span className=" font-bold md:text-lg">Serves:</span> 2
+        <div className="mt-5 pl-0 sm:mt-10 md:pl-6">
+          <div className="mb-6 mt-1 flex flex-col justify-start gap-0 pl-0 md:gap-5">
+            <p className="text-normal text-nowrap pl-5">
+              <span className=" font-bold md:text-lg">Created By:</span> {recipe.creator}
             </p>
-            <p className="text-normal mt-0 text-nowrap pl-5">
+            <p className="text-normal text-nowrap pl-5">
+              <span className=" font-bold md:text-lg">Serves:</span> Family of {recipe.serves}
+            </p>
+            <p className="text-normal text-nowrap pl-5">
               <span className=" font-bold md:text-lg">Prep Time:</span> {recipe.cookingTime.prep} mins
             </p>
-            <p className="text-normal mt-0 text-nowrap pl-5">
+            <p className="text-normal text-nowrap pl-5">
               <span className=" font-bold md:text-lg">Cooking Time:</span> {recipe.cookingTime.cook} mins
             </p>
-            <p className="text-normal mt-0 text-nowrap pl-5">
+            <p className="text-normal text-nowrap pl-5">
               <span className=" font-bold md:text-lg">Total Time:</span> {recipe.cookingTime.total} mins
             </p>
           </div>
@@ -77,7 +79,7 @@ const RecipeCard: React.FC<RecipePropsType> = ({ recipe }) => {
       <div className="md:hidden">
         <Divider />
       </div>
-      <div className="pl-4">
+      <div className="px-4 sm:pl-12">
         <div className="mb-6 mt-6 pl-0">
           <h3 className="text-xl font-bold tracking-tight">Description:</h3>
           <p className="text-normal mt-2 pl-5">{recipe.description}</p>

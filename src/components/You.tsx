@@ -19,13 +19,15 @@ const You = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Add your subscription logic here
-    console.log("Subscribing with email:", email);
-    subscribeToNewsletter(email);
-    setEmail("");
-    toast({
-      title: "Newsletter Sign Up Complete",
-      description: "Thank you for signing up. We appreciate your support.",
-    });
+    if (email) {
+      console.log("Subscribing with email:", email);
+      subscribeToNewsletter(email);
+      setEmail("");
+      toast({
+        title: "Newsletter Sign Up Complete",
+        description: "Thank you for signing up. We appreciate your support.",
+      });
+    }
   };
 
   const emailAddressToCopy = "contact@lovidia.com";
