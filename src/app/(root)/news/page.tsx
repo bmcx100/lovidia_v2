@@ -31,7 +31,7 @@ export default function Home() {
       <div className="mx-auto my-0 w-full max-w-[1024px] bg-brandSecondary ">
         <h2 className="mx-5 my-0  py-2 text-3xl capitalize md:pl-20 md:text-5xl">In the news</h2>
       </div>
-      <div className="mx-0 mt-0 w-full bg-brandPrimary py-6">
+      <div className="mx-auto mt-0 w-full max-w-[1024px] bg-brandPrimary py-6">
         <div className="flex-col items-start justify-start sm:mx-auto sm:max-w-[600px] ">
           <h3 className="ml-5 mt-0 pb-0 text-lg font-bold capitalize sm:ml-10 sm:mt-3 sm:text-2xl lg:ml-0 lg:mt-3">
             Sign Up for our Newsletter.
@@ -52,7 +52,7 @@ export default function Home() {
             </div>
           </form>
 
-          <p className=" ml-4 mr-2 mt-2  max-w-[420px] leading-normal sm:ml-10 sm:mt-5 md:max-w-[400px] lg:ml-0 lg:mt-0 lg:max-w-[400px]">
+          <p className=" ml-4 mr-2 mt-2  max-w-[420px] leading-normal sm:ml-10 sm:mt-5 md:max-w-[400px] lg:ml-0 lg:mt-0 lg:max-w-[450px]">
             Receive your news updates via email and be a number to{" "}
             <span className="text-lg font-bold"> help us affect change</span>.
           </p>
@@ -140,17 +140,6 @@ export default function Home() {
                       </p>
                     </Link>
                   </div>
-                </div>
-              );
-            }
-          })}
-        </div>
-        <div className="mx-12 hidden flex-col justify-between gap-x-3 gap-y-5 lg:flex">
-          {NewsData.map((article, index) => {
-            if (index < 10 && !article.isFeatured) {
-              return (
-                <div key={article.id}>
-                  <p>{article.headline}</p>
                 </div>
               );
             }
