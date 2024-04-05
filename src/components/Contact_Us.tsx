@@ -46,7 +46,7 @@ const Contact_Us = () => {
     });
   };
 
-  const emailAddressToCopy = "contact@lovidia.com";
+  const emailAddressToCopy = "contact@lovidia.net";
 
   const handleCopy = async () => {
     try {
@@ -76,7 +76,7 @@ const Contact_Us = () => {
                   <TooltipTrigger>
                     <div className="flex h-fit items-center justify-end">
                       <span onClick={handleCopy} className="cursor-pointer font-medium text-brandLinkBlue">
-                        contact@lovidia.com
+                        contact@lovidia.net
                       </span>
                     </div>
                   </TooltipTrigger>

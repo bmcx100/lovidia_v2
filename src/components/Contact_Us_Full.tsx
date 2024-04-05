@@ -34,7 +34,7 @@ const Contact_Us = () => {
     console.log({ values });
   };
 
-  const emailAddressToCopy = "contact@lovidia.com";
+  const emailAddressToCopy = "contact@lovidia.net";
 
   const handleCopy = async () => {
     try {
@@ -58,7 +58,7 @@ const Contact_Us = () => {
             <p>
               You can also always email us at{" "}
               <span onClick={handleCopy} className="cursor-pointer text-brandPrimary">
-                contact@lovidia.com
+                contact@lovidia.net
               </span>{" "}
               to let us know about anything that&apos;s on your mind.
             </p>

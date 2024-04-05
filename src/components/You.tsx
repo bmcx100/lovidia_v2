@@ -30,7 +30,7 @@ const You = () => {
     }
   };
 
-  const emailAddressToCopy = "contact@lovidia.com";
+  const emailAddressToCopy = "contact@lovidia.net";
 
   const handleCopy = async () => {
     try {
@@ -103,7 +103,7 @@ const You = () => {
                         variant="white"
                       >
                         <Image src="/images/general/copy.svg" alt="copy paste icon" width={20} height={20} />
-                        <div className="ml-1 text-brandDark/90">contact@lovidia.com</div>
+                        <div className="ml-1 text-brandDark/90">contact@lovidia.net</div>
                       </Button>
                     </div>
                   </TooltipTrigger>
