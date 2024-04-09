@@ -77,7 +77,7 @@ const TGGSurveyControl = () => {
         setValue("isComplete", true);
         sendSurvey(data);
         reset();
-        router.push("/contact/survey/completed");
+        router.push("/contact/share/completed");
       } else if (currentPage < totalPages) {
         // NEXT PAGE SUBMIT
         sendSurvey(data);

@@ -1,12 +1,12 @@
-import Contact_Form_Control from "@/components/Contact_Form_Control";
+import TGGSurveyMain from "@/components/tgg-utils/tggSurvey/TGGSurveyControl";
 import React from "react";
 
-const page = () => {
+const sharepage = () => {
   return (
     <div>
-      <Contact_Form_Control />
+      <TGGSurveyMain />
     </div>
   );
 };
 
-export default page;
+export default sharepage;
