@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import Breakpoints from "./tgg-utils/Breakpoints";
+import Breakpoints from "./tgg-utils/tggBreakpointBars";
 
 const Resources = () => {
   return (

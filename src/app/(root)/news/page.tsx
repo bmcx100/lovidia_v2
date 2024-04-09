@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { NewsData } from "@/constants/newsData";
 import React, { useState } from "react";
 import Link from "next/link";
-import Breakpoints from "@/components/tgg-utils/Breakpoints";
+import Breakpoints from "@/components/tgg-utils/tggBreakpointBars";
 
 export default function Home() {
   const [email, setEmail] = useState<string>("");

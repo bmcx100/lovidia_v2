@@ -1,6 +1,6 @@
 import React from "react";
 
-const Breakpoints = () => {
+const tggBreakPointBars = () => {
   return (
     <div className=" frameMe mt-32  text-slate-200">
       <div className="hidden  h-5 w-[1536px] bg-indigo-800 text-center 2xl:block">2xl: @media (min-width: 1536px)</div>
@@ -13,4 +13,4 @@ const Breakpoints = () => {
   );
 };
 
-export default Breakpoints;
+export default tggBreakPointBars;

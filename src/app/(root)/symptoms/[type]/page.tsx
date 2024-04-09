@@ -5,7 +5,7 @@ import React from "react";
 import Link from "next/link";
 import SymptomCard from "@/components/SymptomCard";
 import { SymptomsData } from "../../../../constants/symptomsData";
-import Breakpoints from "@/components/tgg-utils/Breakpoints";
+import Breakpoints from "@/components/tgg-utils/tggBreakpointBars";
 import HeroSymptoms from "@/components/HeroSymptoms";
 import Divider from "@/components/Divider";
 

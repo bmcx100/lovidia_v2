@@ -11,9 +11,9 @@ import React from "react";
 import EmblaCarousel from "./ui/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 // import { SymptomsData } from "../constants/symptomsData";
-import BreakpointIdentifier from "./tgg-utils/BreakpointIdentifier";
+import BreakpointIdentifier from "./tgg-utils/tggBreakpointNames";
 import { SymptomsData } from "@/constants/symptomsData";
-import Breakpoints from "./tgg-utils/Breakpoints";
+import Breakpoints from "./tgg-utils/tggBreakpointBars";
 
 const Symptoms = () => {
   const OPTIONS: EmblaOptionsType = { loop: true };

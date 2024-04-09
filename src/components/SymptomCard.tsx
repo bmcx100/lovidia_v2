@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import Breakpoints from "./tgg-utils/Breakpoints";
+import Breakpoints from "./tgg-utils/tggBreakpointBars";
 
 interface SymptomDataPropsType {
   symptom: SymptomDataType;

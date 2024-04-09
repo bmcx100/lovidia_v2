@@ -1,9 +1,9 @@
-import BreakpointIdentifier from "@/components/tgg-utils/BreakpointIdentifier";
+import BreakpointIdentifier from "@/components/tgg-utils/tggBreakpointNames";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Breakpoints from "@/components/tgg-utils/Breakpoints";
+import Breakpoints from "@/components/tgg-utils/tggBreakpointBars";
 import Divider from "@/components/Divider";
 
 export default function Resources() {
@@ -36,7 +36,7 @@ export default function Resources() {
             </p>
 
             <Link href="/contact" className="mx-auto mt-1 w-3/4 lg:mt-5">
-              <Button className="w-full text-base font-bold">Suggestions / Requests ?</Button>
+              <Button className="w-full text-base font-bold">Suggestions / Requests?</Button>
             </Link>
           </div>
         </div>

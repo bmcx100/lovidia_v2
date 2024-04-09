@@ -66,7 +66,7 @@ const Contact_Form_Symptoms = ({ currentPage, totalPages, handleNext, handlePrev
       </CardHeader>
 
       <CardDescription className="py-1 pl-6 pr-3">
-        <p>Share as much or as little as you like... </p>
+        {/* <p>Share as much or as little as you like... </p> */}
       </CardDescription>
       <Divider />
       <CardContent className="mt-3">

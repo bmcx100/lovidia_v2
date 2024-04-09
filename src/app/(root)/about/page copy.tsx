@@ -1,9 +1,9 @@
-import BreakpointIdentifier from "@/components/tgg-utils/BreakpointIdentifier";
+import BreakpointIdentifier from "@/components/tgg-utils/tggBreakpointNames";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Breakpoints from "@/components/tgg-utils/Breakpoints";
+import Breakpoints from "@/components/tgg-utils/tggBreakpointBars";
 
 export default function Resources() {
   return (

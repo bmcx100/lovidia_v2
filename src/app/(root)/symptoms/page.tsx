@@ -1,8 +1,8 @@
-import BreakpointIdentifier from "@/components/tgg-utils/BreakpointIdentifier";
+import BreakpointIdentifier from "@/components/tgg-utils/tggBreakpointNames";
 import React from "react";
 import Link from "next/link";
 import { SymptomsData } from "@/constants/symptomsData";
-import Breakpoints from "@/components/tgg-utils/Breakpoints";
+import Breakpoints from "@/components/tgg-utils/tggBreakpointBars";
 import Divider from "@/components/Divider";
 import HeroSymptoms from "@/components/HeroSymptoms";
 

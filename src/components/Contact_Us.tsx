@@ -10,7 +10,7 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Textarea } from "./ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
-import Breakpoints from "./tgg-utils/Breakpoints";
+import Breakpoints from "./tgg-utils/tggBreakpointBars";
 import { sendContactUs } from "@/hooks/sendContactUs";
 import { formSchemaContactUs } from "@/constants/contactUsForm";
 import { useToast } from "@/components/ui/use-toast";

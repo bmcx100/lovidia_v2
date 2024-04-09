@@ -7,7 +7,7 @@ import Link from "next/link";
 import DietaryRestrictionsBadge from "./DietaryRestrictionsBadge";
 import RecipeCategoryCarousel from "./RecipeCarousel";
 import Divider from "./Divider";
-import Breakpoints from "./tgg-utils/Breakpoints";
+import Breakpoints from "./tgg-utils/tggBreakpointBars";
 
 interface RecipePropsType {
   recipe: RecipeType;
