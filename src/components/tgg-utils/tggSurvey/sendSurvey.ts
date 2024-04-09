@@ -14,12 +14,10 @@ export const sendSurvey = async (formData: SurveyFormDataType) => {
   console.log("Running sendSurveyUs.ts");
   console.log(formData);
 
-  // UNCOMMENT TO MAKE WORK
-  //
-  // resend.emails.send({
-  //   from: "Lovidia Survey <onboarding@resend.dev>",
-  //   to: "ryan@thegrooveguides.com",
-  //   subject: subjectContent,
-  //   react: React.createElement(sendSurveyMessage, { formData }),
-  // });
+  resend.emails.send({
+    from: "Lovidia Survey <onboarding@resend.dev>",
+    to: "ryan@thegrooveguides.com",
+    subject: subjectContent,
+    react: React.createElement(sendSurveyMessage, { formData }),
+  });
 };

@@ -10,7 +10,7 @@ export default function sendSurveyMessage({ formData }: sendSurveyMessageProps) 
   return (
     <Html>
       <Head />
-      <Preview>{`New message from ${formData.emailAddress} via the Lovidia Contact Us Form`}</Preview>
+      <Preview>{`New message from ${formData.emailAddress} via the Lovidia Survey Form`}</Preview>
       <Body>
         <Container>
           <Section>

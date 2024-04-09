@@ -19,7 +19,7 @@ const Hero = () => {
           <p className="mt-2 w-3/4 min-w-72 xs:mr-4 sm:ml-32 sm:max-w-[320px] sm:self-center sm:text-lg md:max-w-[400px] md:text-xl lg:ml-72 lg:max-w-[430px] lg:py-8 lg:text-2xl">
             Alleviating symptoms, simplifying access to information, and using our collective voice to create change.
           </p>
-          <Link href="/contact?type=share">
+          <Link href="/contact/survey">
             <Button variant="default" className="mt-4 lg:px-6 lg:py-4 lg:text-lg">
               Tell Us Your Story
             </Button>
