@@ -14,7 +14,7 @@ export const sendContactUs = async (formData: z.infer<typeof formSchemaContactUs
   console.log(formData);
   resend.emails.send({
     from: "Lovidia Contact Form <onboarding@resend.dev>",
-    to: "ryan@thegrooveguides.com, mike@lovidia.net",
+    to: "ryan@thegrooveguides.com",
     subject: "Message from contact form: " + formData.topic,
     // text: "message: " + formData.message,
     react: React.createElement(contactUsMessage, {

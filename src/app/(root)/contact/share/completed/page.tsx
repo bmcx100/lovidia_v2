@@ -12,7 +12,7 @@ const completed = () => {
         <Card className="mx-auto w-[350px] sm:w-[550px] md:w-[650px] lg:w-[750px]">
           <CardHeader className="m-0 overflow-clip bg-brandSecondary  px-2 pt-6">
             <div className="flex flex-row items-start justify-center">
-              <h3 className="self-center font-bold uppercase lg:text-3xl">Thank You</h3>
+              <h3 className="self-center font-bold capitalize lg:text-3xl">Thank You</h3>
             </div>
           </CardHeader>
           {/* NOT FIRST PAGE */}
