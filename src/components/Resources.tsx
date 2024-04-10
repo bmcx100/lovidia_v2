@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Breakpoints from "./tgg-utils/tggBreakpointBars";
+import newsImage from "@/../public/images/resources/news.webp";
 
 const Resources = () => {
   return (
@@ -23,14 +24,15 @@ const Resources = () => {
             />
           </div> */}
 
-          <div className="mx-auto flex h-[110px] w-full items-center justify-center overflow-clip sm:h-[220px]  md:h-[330px] lg:h-[330px]">
-            <Image
+          <div className="mx-auto mt-4 flex h-[110px] w-full items-center justify-center overflow-clip sm:h-[220px]  md:h-[330px] lg:h-[330px]">
+            <Image src={newsImage} alt={`Image of a couple doing research`} />
+            {/* <Image
               src={`/images/resources/news.png`}
               alt={`Image of a couple doing research`}
               width={549}
               height={330}
               className="mt-4"
-            />
+            /> */}
           </div>
 
           <div className=" mx-auto flex h-full w-1/2 flex-col items-center justify-around gap-3 sm:mr-4 sm:gap-8 md:gap-16">

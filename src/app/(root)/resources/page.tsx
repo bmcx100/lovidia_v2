@@ -19,7 +19,7 @@ export default function Resources() {
         <div className="mx-auto gap-5 lg:flex">
           <div className="mx-auto h-[220px] w-auto overflow-clip lg:h-[330px]">
             <Image
-              src={`/images/resources/cooking.png`}
+              src={`/images/resources/cooking.webp`}
               alt={`Image of a couple cooking`}
               width={549}
               height={330}
@@ -49,7 +49,7 @@ export default function Resources() {
           <div className="mx-auto gap-5 lg:flex lg:flex-row-reverse">
             <div className="mx-auto h-[220px] w-auto overflow-clip lg:h-[330px]">
               <Image
-                src={`/images/resources/news.png`}
+                src={`/images/resources/news.webp`}
                 alt={`Image of a couple doing research`}
                 width={549}
                 height={330}

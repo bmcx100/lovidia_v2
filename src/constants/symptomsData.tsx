@@ -1,8 +1,8 @@
 export const SymptomsData = [
   {
-    id: "brain-fog",
+    id: "brainfog",
     title: "Brain Fog",
-    imageUrl: "brain-fog.png",
+    imageUrl: "brainfog.webp",
     description: [
       "People experiencing brain fog often feel mentally drained and struggle with various cognitive functions. Some common signs of brain fog include reduced cognitive functioning or difficulty with paying attention, keeping focus, multitasking, and memory recall. It can feel like mild memory loss, unusual forgetfulness, fuzzy memory, or sluggishness when trying to remember names, dates, where you put your keys, and other important things.",
       "Additionally, brain fog may lead to confusion, spaciness, and challenges in processing information. While it is not a medical term or diagnosis, brain fog can be associated with other conditions such as chronic pain, sleep disorders, nutritional deficiencies, and other complex health issues.",
@@ -35,7 +35,7 @@ export const SymptomsData = [
   {
     id: "chronic-fatigue",
     title: "Chronic Fatigue Syndrome",
-    imageUrl: "fatigue.png",
+    imageUrl: "fatigue.webp",
     description: [
       "Chronic Fatigue Syndrome (CFS), also known as myalgic encephalomyelitis (ME), is a complex and long-term disorder characterized by profound fatigue that persists despite adequate rest. The fatigue experienced by individuals with CFS is disproportionate to their level of activity and often worsens with both physical and mental exertion.  It can significantly impact daily life, leading to complications such as depression, isolation, and restrictions on lifestyle.",
     ],
@@ -66,7 +66,7 @@ export const SymptomsData = [
   {
     id: "dyspnea",
     title: "Dyspnea",
-    imageUrl: "dyspnea.png",
+    imageUrl: "dyspnea.webp",
     description: [
       "Dyspnea, known as shortness of breath, is the sensation that you can’t get enough air into your lungs. It might feel like your chest is tight, you’re gasping for air, or you’re working harder to breathe. Dyspnea can be described as “air hunger,” chest tightness, or the need to work harder to breathe. It can often be a symptom of another underlying condition, heart and lung problems, asthma, allergies, anxiety, or Chronic obstructive pulmonary disease (COPD).  Acute Dyspnea can arrive suddenly and doesn’t last long (hours to days). Chronic Dyspnea can persist for weeks or longer, often due to one or more of the underlying health conditions.",
     ],
@@ -98,7 +98,7 @@ export const SymptomsData = [
   {
     id: "fibromyalgia",
     title: "Fibromyalgia/ Muscle Soreness ",
-    imageUrl: "fibromyalgia.png",
+    imageUrl: "fibromyalgia.webp",
     description: [
       "Chronic muscle soreness often presents as a persistent discomfort that extends beyond the typical post-exercise muscle ache. Unlike transient soreness, which usually subsides with rest and self-care, chronic muscle soreness persists over time.  Myofascial Pain Syndrome (MPS) is long-term pain that affects specific muscles and the thin connective tissue (fascia) surrounding them.",
       "Fibromyalgia also involves chronic, widespread pain.  Constant, dull companion, affecting muscles, tendons, and ligaments.  Despite seemingly adequate sleep, wake up tired and drained. Pain can disrupt rest, leading to a perpetual cycle of exhaustion.  Impaired attention, concentration, and memory. Simple tasks become challenging, and mental clarity is reduced.",
@@ -127,7 +127,7 @@ export const SymptomsData = [
   {
     id: "IBS",
     title: "Irritable bowel syndrome (IBS)",
-    imageUrl: "ibs.png",
+    imageUrl: "ibs.webp",
     description: [
       "Irritable bowel syndrome (IBS) is a chronic gastrointestinal disorder that affects the stomach and intestines. It can cause extreme discomfort, disrupting daily ability to function. causing cramping, abdominal pain, bloating, gas, and diarrhea or constipation.",
     ],
@@ -159,7 +159,7 @@ export const SymptomsData = [
   {
     id: "anxiety",
     title: "Anxiety",
-    imageUrl: "anxiety.png",
+    imageUrl: "anxiety.webp",
     description: [
       "Anxiety is a multifaceted emotional state that encompasses both mental and physical aspects. It is characterized by intense, excessive, and persistent worry and fear about everyday situations. People with anxiety often experience heightened arousal, apprehension, and distressing thoughts, which can be triggered by real or imagined dangers. Physically, anxiety activates various body systems, preparing the individual to respond to perceived threats. In summary, anxiety involves a complex interplay of mental and physiological responses, leading to apprehensive uneasiness and nervousness.",
     ],
@@ -202,7 +202,7 @@ export const SymptomsData = [
   {
     id: "pots",
     title: "Post Orthostatic Tachycardia Syndrome (POTS)",
-    imageUrl: "pots.png",
+    imageUrl: "pots.webp",
     description: [
       "Postural Orthostatic Tachycardia Syndrome (POTS) is a blood circulation disorder this can be disruptive to daily life.  POTS will show up in daily physical struggles as well as having social and emotional impact.  Due to unpredictable symptoms, attending events, gatherings or even going out with friends becomes a difficult decision leading to Isolation.  The exact cause of POTS may be related to underlying autoimmune disorders (lupus, Sjogren syndrome, celiac disease), and chronic fatigue syndrome.",
     ],
@@ -233,7 +233,7 @@ export const SymptomsData = [
   {
     id: "depression",
     title: "Depression",
-    imageUrl: "depression.png",
+    imageUrl: "depression.webp",
     description: [
       "Depression, often occurring in the wake of persistent anxiety, is a profound and pervasive mood disorder. It engulfs individuals in a persistent state of sadness, hopelessness, and emotional numbness. Unlike anxiety, which is characterized by excessive worry and fear, depression manifests as a deep sense of despair, affecting one’s thoughts, feelings, and physical well-being. Symptoms may include loss of interest in previously enjoyed activities, changes in appetite and sleep patterns, fatigue, and feelings of worthlessness. Depression can significantly impair daily functioning and quality of life, necessitating professional intervention and support.",
     ],
@@ -281,7 +281,7 @@ export const SymptomsData = [
 // {
 //   id: "",
 //   title: "",
-//   imageUrl: ".png",
+//   imageUrl: ".webp",
 //   description: [""],
 //   symptoms: [
 //   ],

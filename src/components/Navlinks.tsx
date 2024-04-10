@@ -12,6 +12,7 @@ import { navCategories } from "@/constants/navCategoriesData";
 import Navlink from "./Navlink";
 import { usePathname } from "next/navigation";
 import Divider from "./Divider";
+import logoImage from "@/../public/images/general/logo.svg";
 
 const Navlinks = () => {
   const pathname = usePathname();
@@ -51,13 +52,14 @@ const Navlinks = () => {
             <Link href="/" onClick={() => setOpen(false)}>
               <div className="my-2 flex flex-col items-center justify-start">
                 <div className="relative h-[50px] w-[50px] lg:h-16 lg:w-16">
-                  <Image
+                  {/* <Image
                     src="/images/general/logo.svg"
                     alt="lovidia logo"
                     layout="fill"
                     objectFit="cover"
                     className="w-100 h-100"
-                  />
+                  /> */}
+                  <Image src={logoImage} alt="lovidia logo" fill />
                 </div>
                 <p className="mt-0 text-center text-lg font-medium">lovidia</p>
               </div>

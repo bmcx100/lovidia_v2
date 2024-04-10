@@ -7,6 +7,7 @@ import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import logoImage from "@/../public/images/general/logo.svg";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -16,7 +17,10 @@ const Navbar = () => {
     <div className=" mx-auto flex w-full max-w-[1024px] items-center justify-between px-8 py-3 md:px-12 md:py-6">
       <Link href="/">
         <div className="mt-2 flex flex-col items-center justify-start">
-          <Image src="/images/general/logo.svg" alt="lovidia logo" width={60} height={60} />
+          {/* <Image src="/images/general/logo.svg" alt="lovidia logo" width={60} height={60} /> */}
+          <div className="h-[60px] w-[60px]">
+            <Image src={logoImage} alt="lovidia logo" fill />
+          </div>
           <p className="mt-0 text-center text-lg font-medium">lovidia</p>
         </div>
       </Link>
@@ -36,13 +40,16 @@ const Navbar = () => {
         <DrawerTrigger className="mx-auto flex w-screen min-w-[330px] max-w-[500px] items-center justify-between px-4 pb-2 xs:max-w-[600px] xs:px-6 xs:pt-2 sm:max-w-[700px] sm:py-6">
           <Link href="/">
             <div className="mt-4 flex flex-col items-center justify-center">
-              <Image
+              {/* <Image
                 src="/images/general/logo.svg"
                 alt="lovidia logo"
                 width={40}
                 height={40}
                 className="sm:h-16 sm:w-16"
-              />
+              /> */}
+              <div className="h-[40px] w-[40px] sm:h-16 sm:w-16">
+                <Image src={logoImage} alt="lovidia logo" fill />
+              </div>
               <p className="text-medium mt-0 text-center text-lg">lovidia</p>
             </div>
           </Link>
