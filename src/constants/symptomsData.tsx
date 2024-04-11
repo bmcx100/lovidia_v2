@@ -201,7 +201,7 @@ export const SymptomsData = [
   },
   {
     id: "pots",
-    title: "Post Orthostatic Tachycardia Syndrome (POTS)",
+    title: "Postural Orthostatic Tachycardia Syndrome (POTS)",
     imageUrl: "pots.webp",
     description: [
       "Postural Orthostatic Tachycardia Syndrome (POTS) is a blood circulation disorder this can be disruptive to daily life.  POTS will show up in daily physical struggles as well as having social and emotional impact.  Due to unpredictable symptoms, attending events, gatherings or even going out with friends becomes a difficult decision leading to Isolation.  The exact cause of POTS may be related to underlying autoimmune disorders (lupus, Sjogren syndrome, celiac disease), and chronic fatigue syndrome.",

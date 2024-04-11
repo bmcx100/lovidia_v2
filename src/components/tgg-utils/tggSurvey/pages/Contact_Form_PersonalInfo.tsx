@@ -17,12 +17,22 @@ const Contact_Form_PersonalInfo: React.FC = () => {
       <label htmlFor="name" className="mt-2 block text-sm font-medium text-gray-700">
         Name
       </label>
-      <input id="name" {...register("name")} placeholder="Name" className="" />
+      <input
+        id="name"
+        {...register("name")}
+        placeholder="Name"
+        className="background rounded-sm bg-slate-100 p-2 placeholder:text-sm"
+      />
 
       <label htmlFor="email" className="mt-5  block text-sm font-medium text-gray-700">
         Email Address
       </label>
-      <input id="email" {...register("emailAddress")} placeholder="Email Address" />
+      <input
+        id="email"
+        {...register("emailAddress")}
+        placeholder="Email Address"
+        className="background rounded-sm bg-slate-100 p-2 placeholder:text-sm"
+      />
       <label htmlFor="age" className="mt-5  block text-sm font-medium text-gray-700">
         Age
       </label>

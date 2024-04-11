@@ -13,6 +13,7 @@ type SurveyLayoutProps = {
   handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
   handleNext: () => void;
   handlePrev: () => void;
+  handleGoto: (page: number) => void;
 };
 
 const TGGSurveyLayout: React.FC<SurveyLayoutProps> = ({
@@ -21,13 +22,16 @@ const TGGSurveyLayout: React.FC<SurveyLayoutProps> = ({
   handlePrev,
   handleNext,
   handleSubmit,
+  handleGoto,
   children,
 }) => {
   const paginationProgBar = Array.from({ length: totalPages }, (_, index) => {
     if (currentPage === index + 1) {
       return <div key={index} className="z-10 h-4 w-4 rounded-full bg-brandLight"></div>;
     } else {
-      return <div key={index} className="z-10 h-4 w-4 rounded-full bg-brandDark "></div>;
+      return (
+        <div key={index} onClick={() => handleGoto(index)} className="z-10 h-4 w-4 rounded-full bg-brandDark "></div>
+      );
     }
   });
 

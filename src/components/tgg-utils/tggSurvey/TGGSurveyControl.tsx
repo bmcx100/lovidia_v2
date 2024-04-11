@@ -12,6 +12,7 @@ import Contact_Form_Welcome from "./pages/Contact_Form_Welcome";
 import Contact_Form_Symptoms from "./pages/Contact_Form_Symptoms";
 import Contact_Form_Treatments from "./pages/Contact_Form_Treatments";
 import { sendSurvey } from "./sendSurvey";
+import Contact_Form_Conclusion from "./pages/Contact_Form_Conclusion";
 
 const TGGSurveyControl = () => {
   const SurveyFormData = useForm<SurveyFormDataType>({
@@ -45,7 +46,7 @@ const TGGSurveyControl = () => {
     },
   });
 
-  const totalPages = 4;
+  const totalPages = 5;
 
   const FormComponentController: TFormComponentController = {
     1: Contact_Form_Welcome,
@@ -55,7 +56,7 @@ const TGGSurveyControl = () => {
     // 5: Contact_Form_Impact,
     // 6: Contact_Form_Support,
     // 7: Contact_Form_Feedback,
-    // 8: Contact_Form_Conclusion,
+    5: Contact_Form_Conclusion,
   };
 
   const router = useRouter();
@@ -68,10 +69,8 @@ const TGGSurveyControl = () => {
 
     try {
       // Simulate form processing logic
-      // console.log("c Processing form data...");
       console.log(`Page: ${currentPage} of Pages: ${totalPages}`);
       // PAGE WHERE FINAL SUBMIT BUTTON IS CLICKED
-      // //
       if (currentPage === totalPages) {
         console.log("Official Submission");
         setValue("isComplete", true);
@@ -83,16 +82,6 @@ const TGGSurveyControl = () => {
         sendSurvey(data);
         setCurrentPage((prevState) => prevState + 1);
       }
-      //   form.reset();
-      //   toast({
-      //     title: "Contact Form Submitted",
-      //     description: "Thank you for contacting us. We will respond to your message as soon as possible.",
-      //   });
-      // };
-      // If there's an async operation, ensure it's awaited or handled properly
-      // For example:
-      // await sendDataToServer(data);
-
       console.log("Form processing complete.");
     } catch (error) {
       console.error("Error during form submission:", error);
@@ -104,18 +93,21 @@ const TGGSurveyControl = () => {
   const wrappedHandleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     // console.log("a Form submit started");
     // PAGE WHERE SUBMIT BUTTON IS JUST A SKIP (NO FORM INPUTS)
+
+    if (currentPage > 1) {
+      handleFormSubmit(event)
+        .then(() => {
+          // console.log("m Form submit finished");
+        })
+        .catch((error) => {
+          console.error("Error in form submission process:", error);
+        });
+    }
     if (currentPage === 1) {
+      event.preventDefault();
       console.log("page skipped");
       setCurrentPage((prevState) => prevState + 1);
     }
-
-    handleFormSubmit(event)
-      .then(() => {
-        // console.log("m Form submit finished");
-      })
-      .catch((error) => {
-        console.error("Error in form submission process:", error);
-      });
   };
 
   function handlePrev() {
@@ -132,6 +124,13 @@ const TGGSurveyControl = () => {
     }
   }
 
+  function handleGoto(page: number) {
+    console.log("goto");
+    // const currentFormData = getValues();
+    // console.log("handleNext: Current form data:", currentFormData);
+    setCurrentPage(page + 1);
+  }
+
   const [currentPage, setCurrentPage] = React.useState(1);
   const CurrentFormComponent = FormComponentController[currentPage];
 
@@ -144,6 +143,7 @@ const TGGSurveyControl = () => {
           handlePrev={handlePrev}
           handleSubmit={wrappedHandleFormSubmit} // Pass the handleSubmit function for form submission
           handleNext={handleNext}
+          handleGoto={handleGoto}
         >
           <CurrentFormComponent formData={SurveyFormData} />
         </TGGSurveyLayout>

@@ -14,7 +14,7 @@ export type TFormComponentController = {
 export const SurveyFormSchema = z
   .object({
     name: z.string(),
-    emailAddress: z.string().email(),
+    emailAddress: z.string(), //setting this to email made it be required couldn't find a good work around
     age: z.enum([
       "select",
       "under_18",
