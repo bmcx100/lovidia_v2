@@ -28,16 +28,6 @@ const TGGSurveyControl = () => {
       treatmentsImpact: "",
       treatmentsHelpful: "",
       treatmentComments: "",
-      impact: "",
-      affects: "",
-      managing: "",
-      impactComments: "",
-      received: "",
-      additional: "",
-      supportComments: "",
-      suggestions: "",
-      topics: "",
-      feedbackComments: "",
       newsletter: false,
       followup: false,
       community: false,
@@ -53,9 +43,6 @@ const TGGSurveyControl = () => {
     2: Contact_Form_PersonalInfo,
     3: Contact_Form_Symptoms,
     4: Contact_Form_Treatments,
-    // 5: Contact_Form_Impact,
-    // 6: Contact_Form_Support,
-    // 7: Contact_Form_Feedback,
     5: Contact_Form_Conclusion,
   };
 
@@ -79,7 +66,7 @@ const TGGSurveyControl = () => {
         router.push("/contact/share/completed");
       } else if (currentPage < totalPages) {
         // NEXT PAGE SUBMIT
-        await sendSurvey(data);
+        // await sendSurvey(data);
         setCurrentPage((prevState) => prevState + 1);
       }
       // console.log("Form processing complete.");

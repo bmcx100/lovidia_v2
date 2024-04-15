@@ -37,22 +37,6 @@ export default function sendSurveyMessage({ formData }: sendSurveyMessageProps) 
             <Text>treatmentsHelpful: {formData.treatmentsHelpful}</Text>
             <Text>treatmentComments: {formData.treatmentComments}</Text>
             <Text></Text>
-            <Text>Impact Info</Text>
-            <Text>impact: {formData.impact}</Text>
-            <Text>affects: {formData.affects}</Text>
-            <Text>managing: {formData.managing}</Text>
-            <Text>impactComments: {formData.impactComments}</Text>
-            <Text></Text>
-            <Text>Support Info</Text>
-            <Text>received: {formData.received}</Text>
-            <Text>additional: {formData.additional}</Text>
-            <Text>supportComments: {formData.supportComments}</Text>
-            <Text></Text>
-            <Text>Suggestions Info</Text>
-            <Text>suggestions: {formData.suggestions}</Text>
-            <Text>topics: {formData.topics}</Text>
-            <Text>feedbackComments: {formData.feedbackComments}</Text>
-            <Text></Text>
             <Text>Consents Info</Text>
             <Text>newsletter: {formData.newsletter?.toString()}</Text>
             <Text>followup: {formData.followup?.toString()}</Text>
