@@ -54,9 +54,9 @@ export default function sendSurveyMessage({ formData }: sendSurveyMessageProps) 
             <Text>feedbackComments: {formData.feedbackComments}</Text>
             <Text></Text>
             <Text>Consents Info</Text>
-            <Text>newsletter: {formData.newsletter}</Text>
-            <Text>followup: {formData.followup}</Text>
-            <Text>community: {formData.community}</Text>
+            <Text>newsletter: {formData.newsletter?.toString()}</Text>
+            <Text>followup: {formData.followup?.toString()}</Text>
+            <Text>community: {formData.community?.toString()}</Text>
             <Text>conclusionComments: {formData.conclusionComments}</Text>
           </Section>
         </Container>

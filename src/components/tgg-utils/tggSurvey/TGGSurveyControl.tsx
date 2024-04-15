@@ -64,25 +64,25 @@ const TGGSurveyControl = () => {
   //SUBMITTING LOGIC
   const { handleSubmit, setValue, reset } = SurveyFormData;
 
-  const onSubmit = (data: SurveyFormDataType) => {
+  const onSubmit = async (data: SurveyFormDataType) => {
     console.log("onSubmit triggered with data:", data);
 
     try {
       // Simulate form processing logic
-      console.log(`Page: ${currentPage} of Pages: ${totalPages}`);
+      // console.log(`Page: ${currentPage} of Pages: ${totalPages}`);
       // PAGE WHERE FINAL SUBMIT BUTTON IS CLICKED
       if (currentPage === totalPages) {
-        console.log("Official Submission");
-        setValue("isComplete", true);
-        sendSurvey(data);
+        // console.log("Official Submission");
+        // setValue("isComplete", true);
+        await sendSurvey(data);
         reset();
         router.push("/contact/share/completed");
       } else if (currentPage < totalPages) {
         // NEXT PAGE SUBMIT
-        sendSurvey(data);
+        await sendSurvey(data);
         setCurrentPage((prevState) => prevState + 1);
       }
-      console.log("Form processing complete.");
+      // console.log("Form processing complete.");
     } catch (error) {
       console.error("Error during form submission:", error);
     }

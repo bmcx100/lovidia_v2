@@ -11,7 +11,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendSurvey = async (formData: SurveyFormDataType) => {
   const subjectContent = `Survey Submission from ${formData.name} ${formData.emailAddress}`;
 
-  console.log("Running sendSurveyUs.ts");
+  console.log("Running sendSurvey.ts");
   console.log(formData);
 
   resend.emails.send({

@@ -217,7 +217,6 @@ export const SymptomsData = [
       "Stay hydrated: Drink plenty of water.",
       "Increase salt intake (unless you have high blood pressure).",
       "Wear compression stockings to aid blood circulation.",
-      "Practice endurance therapy or graded training: Prolonged inactivity can worsen the condition.",
       "Get up from a lying position slowly and sit for a while before standing.",
       "Dizziness: lie down and raise your legs if possible.",
       "Small, Frequent Meals: Eating smaller meals throughout the day can prevent blood pressure drops after eating.",
