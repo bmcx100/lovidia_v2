@@ -79,7 +79,6 @@ export const SurveyFormSchema = z
     followup: z.boolean(),
     community: z.boolean(),
     conclusionComments: z.string(),
-    isComplete: z.boolean(),
   })
   .partial();
 //SURVEY DONE

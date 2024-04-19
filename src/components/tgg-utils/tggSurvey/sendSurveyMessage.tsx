@@ -14,8 +14,6 @@ export default function sendSurveyMessage({ formData }: sendSurveyMessageProps) 
       <Body>
         <Container>
           <Section>
-            {/* <Heading as="h1">You received the following message from the contact form</Heading> */}
-            {formData.isComplete && <Text>SUBMITTED SURVEY!!!</Text>}
             <Text></Text>
             <Text>You received the following message from the lovidia.net survey</Text>
             <Text></Text>

@@ -15,8 +15,6 @@ export default function sendSurveyMessage({ formData }: sendSurveyMessageProps) 
         <Body className="w-full">
           <Container className="w-full bg-brandDark px-20 py-12">
             <Section className="w-full bg-brandLight px-5 py-8">
-              {/* <Heading as="h1">You received the following message from the contact form</Heading> */}
-              {formData.isComplete && <Text className="text-3xl">SUBMITTED SURVEY!!!</Text>}
               <Text className="text-3xl">You received the following message from the lovidia.net survey</Text>
               <Text className="text-3xl">Personal Info</Text>
               <Text>name: {formData.name}</Text>

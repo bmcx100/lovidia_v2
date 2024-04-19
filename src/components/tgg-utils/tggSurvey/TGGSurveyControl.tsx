@@ -13,6 +13,7 @@ import Contact_Form_Symptoms from "./pages/Contact_Form_Symptoms";
 import Contact_Form_Treatments from "./pages/Contact_Form_Treatments";
 import { sendSurvey } from "./sendSurvey";
 import Contact_Form_Conclusion from "./pages/Contact_Form_Conclusion";
+import { stringify } from "querystring";
 
 const TGGSurveyControl = () => {
   const SurveyFormData = useForm<SurveyFormDataType>({
@@ -32,7 +33,6 @@ const TGGSurveyControl = () => {
       followup: false,
       community: false,
       conclusionComments: "",
-      isComplete: false,
     },
   });
 
@@ -52,21 +52,27 @@ const TGGSurveyControl = () => {
   const { handleSubmit, setValue, reset } = SurveyFormData;
 
   const onSubmit = async (data: SurveyFormDataType) => {
-    console.log("onSubmit triggered with data:", data);
-
+    // console.log("onSubmit triggered with data:", data);
     try {
-      // Simulate form processing logic
-      // console.log(`Page: ${currentPage} of Pages: ${totalPages}`);
       // PAGE WHERE FINAL SUBMIT BUTTON IS CLICKED
       if (currentPage === totalPages) {
-        // console.log("Official Submission");
-        // setValue("isComplete", true);
-        await sendSurvey(data);
+        const res = await fetch("/api/Survey", {
+          method: "POST",
+          body: JSON.stringify({ data }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (!res.ok) {
+          throw new Error("Failed to submit Survey.");
+        }
+
         reset();
+        router.refresh();
         router.push("/contact/share/completed");
       } else if (currentPage < totalPages) {
         // NEXT PAGE SUBMIT
-        // await sendSurvey(data);
         setCurrentPage((prevState) => prevState + 1);
       }
       // console.log("Form processing complete.");
