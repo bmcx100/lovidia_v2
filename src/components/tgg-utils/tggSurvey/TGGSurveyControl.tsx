@@ -56,7 +56,7 @@ const TGGSurveyControl = () => {
     try {
       // PAGE WHERE FINAL SUBMIT BUTTON IS CLICKED
       if (currentPage === totalPages) {
-        const res = await fetch("/api/Survey", {
+        const res = await fetch("https://lovidia.net/api/Survey", {
           method: "POST",
           body: JSON.stringify({ data }),
           headers: {
