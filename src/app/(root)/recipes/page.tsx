@@ -28,7 +28,8 @@ export default function Home() {
           </h1>
         </div> */}
         <p className="text-md mx-0 mt-3 px-3 font-medium text-foreground/90 md:pl-16 lg:text-2xl">
-          Time to dive into a world where eating well means feeling better.
+          Adhering to a strict Long COVID meal plan for even a week is likely to help reduce your symptoms. Eat only
+          these foods and let us know the impact it has on your health.
         </p>
         <div className="mx-2 md:mx-12">
           {RecipesData.map((recipe) => {

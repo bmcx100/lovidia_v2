@@ -44,7 +44,7 @@ const RecipeFeatured: React.FC<RecipePropsType> = ({ recipe }) => {
         <div className="relative mt-0 aspect-video w-full md:max-w-[500px] lg:max-w-[600px]">
           <Image
             src={`/images/recipes/meals/${recipe.imageFilename}`}
-            alt="picture of a pizza"
+            alt={`picture of ${recipe.title}`}
             layout="fill"
             objectFit="cover"
             className="h-full w-full"

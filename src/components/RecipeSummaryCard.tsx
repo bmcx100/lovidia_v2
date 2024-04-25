@@ -41,7 +41,7 @@ const RecipeSummaryCard: React.FC<RecipePropsType> = ({ recipe }) => {
             <Link href={`/recipes/${recipe.id}`}>
               <Image
                 src={`/images/recipes/meals/${recipe.imageFilename}`}
-                alt="picture of a pizza"
+                alt={`picture of ${recipe.title}`}
                 layout="fill"
                 objectFit="cover"
                 className="h-full w-full"

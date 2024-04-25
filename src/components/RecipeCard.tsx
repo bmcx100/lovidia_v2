@@ -45,7 +45,7 @@ const RecipeCard: React.FC<RecipePropsType> = ({ recipe }) => {
         <div className="relative aspect-video w-screen md:w-[400px] md:max-w-[600px] lg:w-[600px]">
           <Image
             src={`/images/recipes/meals/${recipe.imageFilename}`}
-            alt="picture of a pizza"
+            alt={`picture of {recipe.title}`}
             layout="fill"
             objectFit="cover"
             className="h-full w-full"
