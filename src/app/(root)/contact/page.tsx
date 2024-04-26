@@ -1,4 +1,3 @@
-import Contact_Form_Control from "@/components/Contact_Form_Control";
 import React from "react";
 // import { useSearchParams } from "next/navigation";
 import Contact_Us from "@/components/Contact_Us";
@@ -11,7 +10,6 @@ export default function ContactHome() {
 
   return (
     <div className="mx-2 mt-2 sm:mt-6 ">
-      {/* <Contact_Form_Control /> */}
       <Contact_Us />
     </div>
   );
