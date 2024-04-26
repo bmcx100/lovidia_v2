@@ -51,11 +51,16 @@ const Contact_Us = () => {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(emailAddressToCopy);
+      toast({
+        title: `${emailAddressToCopy} copied to clipboard`,
+        description: "Thank you for your interest in contacting us. We look forward to hearing from you.",
+      });
       console.log("Text copied to clipboard");
     } catch (err) {
       console.error("Failed to copy:", err);
     }
   };
+
   return (
     <div>
       {/* <Breakpoints /> */}

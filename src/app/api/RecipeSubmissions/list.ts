@@ -10,7 +10,7 @@ export default async function handler(request: any, response: any) {
     const { mongoClient } = connection;
 
     const db = mongoClient.db("SurveyDB");
-    const collection = db.collection("surveys");
+    const collection = db.collection("recipesubmissions");
     const results = await collection
       .find({})
       // .project({
