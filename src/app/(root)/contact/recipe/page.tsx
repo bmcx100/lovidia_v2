@@ -1,6 +1,5 @@
 import React from "react";
 // import { useSearchParams } from "next/navigation";
-import Contact_Us_Recipe from "@/components/Contact_Us_Recipe";
 import TGGFormControl from "@/components/tgg-utils/tggForm/TGGFormControl";
 
 export default function ContactHome() {
