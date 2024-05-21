@@ -25,6 +25,11 @@ export default function Home() {
       });
     }
   };
+  const sortedNewsData = NewsData.sort((a, b) => {
+    const dateA = new Date(a.date).getTime(); // Convert to timestamp
+    const dateB = new Date(b.date).getTime(); // Convert to timestamp
+    return dateB - dateA; // Now you are subtracting numbers, not Date objects
+  });
 
   return (
     <section className="mx-0 mt-2 min-w-[330px] sm:mt-6">
@@ -60,7 +65,7 @@ export default function Home() {
       </div>
       <div className="mx-auto w-full  max-w-[1024px] ">
         <div className="">
-          {NewsData.map((article) => {
+          {sortedNewsData.map((article) => {
             if (article.isFeatured) {
               return (
                 <div key={article.id} className=" bg-grid-2 p-5 shadow-sm">
@@ -120,7 +125,7 @@ export default function Home() {
           })}
         </div>
         <div className="">
-          {NewsData.map((article, index) => {
+          {sortedNewsData.map((article, index) => {
             if (!article.isFeatured && index < 10) {
               return (
                 <div key={article.id} className={`p-4  shadow-sm ${index % 2 === 0 ? "bg-grid-1/20" : "bg-grid-2"}`}>

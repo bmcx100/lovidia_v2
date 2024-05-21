@@ -11,6 +11,9 @@ import React from "react";
 
 export default function Home() {
   const [isLongDescVisible, setIsLongDescVisible] = React.useState(false);
+  // Sorting RecipesData by id in descending order
+  const sortedRecipesData = [...RecipesData].sort((a, b) => b.id - a.id);
+
   return (
     <section className="mx-0 mt-2 min-w-[330px]  sm:mt-6">
       <div className="mx-auto  max-w-[1024px] ">
@@ -39,7 +42,7 @@ export default function Home() {
           })}
         </div>
         <div className="mx-12 hidden flex-wrap justify-between gap-x-3 gap-y-5 lg:flex">
-          {RecipesData.map((recipe, index) => {
+          {sortedRecipesData.map((recipe, index) => {
             if (index < 7 && !recipe.isFeatured) {
               return <RecipeSummaryCard key={recipe.id} recipe={recipe} />;
             }
